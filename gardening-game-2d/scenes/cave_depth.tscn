@@ -1,0 +1,235 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="2_hud"]
+[ext_resource type="PackedScene" path="res://ui/inventory_panel.tscn" id="3_inv"]
+[ext_resource type="PackedScene" path="res://ui/ladder_menu.tscn" id="4_ladder_menu"]
+[ext_resource type="Script" path="res://scripts/cave_depth.gd" id="5_depth"]
+[ext_resource type="Script" path="res://scripts/cave_spawner.gd" id="6_spawner"]
+[ext_resource type="Script" path="res://scripts/cave_hole.gd" id="7_hole"]
+[ext_resource type="Script" path="res://scripts/cave_ladder.gd" id="8_ladder"]
+[ext_resource type="Script" path="res://scripts/scene_exit.gd" id="9_exit"]
+[ext_resource type="Script" path="res://scripts/night_cycle.gd" id="10_night"]
+[ext_resource type="PackedScene" path="res://ui/botanary_panel.tscn" id="11_botanary"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hole"]
+size = Vector2(56, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ladder"]
+size = Vector2(72, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(96, 72)
+
+[node name="CaveDepth" type="Node2D"]
+script = ExtResource("5_depth")
+
+[node name="NightCycle" type="Node" parent="."]
+script = ExtResource("10_night")
+
+[node name="Ground" type="ColorRect" parent="."]
+z_index = -2
+offset_right = 4500.0
+offset_bottom = 720.0
+color = Color(0.11, 0.11, 0.12, 1)
+
+[node name="Path" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 180.0
+offset_top = 160.0
+offset_right = 4300.0
+offset_bottom = 560.0
+color = Color(0.15, 0.15, 0.16, 1)
+
+[node name="ArrivalMarker" type="Marker2D" parent="."]
+position = Vector2(300, 360)
+
+[node name="HoleCandidates" type="Node2D" parent="."]
+
+[node name="hole_1_a" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(3900, 220)
+
+[node name="hole_1_b" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4000, 360)
+
+[node name="hole_1_c" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4100, 500)
+
+[node name="hole_2_a" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(3920, 500)
+
+[node name="hole_2_b" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4020, 240)
+
+[node name="hole_2_c" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4120, 380)
+
+[node name="hole_3_a" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(3940, 260)
+
+[node name="hole_3_b" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4040, 480)
+
+[node name="hole_3_c" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4140, 340)
+
+[node name="hole_4_a" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(3960, 440)
+
+[node name="hole_4_b" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4060, 220)
+
+[node name="hole_4_c" type="Marker2D" parent="HoleCandidates"]
+position = Vector2(4160, 500)
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("6_spawner")
+
+[node name="SpawnMarkers" type="Node2D" parent="Spawner"]
+
+[node name="Spawn01" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(760, 240)
+
+[node name="Spawn02" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(1060, 460)
+
+[node name="Spawn03" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(1380, 300)
+
+[node name="Spawn04" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(1720, 500)
+
+[node name="Spawn05" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(2040, 220)
+
+[node name="Spawn06" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(2380, 420)
+
+[node name="Spawn07" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(2720, 280)
+
+[node name="Spawn08" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(3040, 500)
+
+[node name="Spawn09" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(3360, 260)
+
+[node name="Spawn10" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(3600, 440)
+
+[node name="Plants" type="Node2D" parent="Spawner"]
+
+[node name="HiddenHole" type="Area2D" parent="."]
+position = Vector2(4000, 360)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_hole")
+
+[node name="Body" type="ColorRect" parent="HiddenHole"]
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = 28.0
+mouse_filter = 2
+color = Color(0.15, 0.15, 0.16, 1)
+
+[node name="FoundLabel" type="Label" parent="HiddenHole"]
+visible = false
+offset_left = -40.0
+offset_top = -12.0
+offset_right = 40.0
+offset_bottom = 12.0
+text = "HOLE"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="HiddenHole"]
+visible = false
+offset_left = -60.0
+offset_top = 32.0
+offset_right = 60.0
+offset_bottom = 56.0
+text = "E: Descend"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenHole"]
+shape = SubResource("RectangleShape2D_hole")
+
+[node name="Ladder" type="Area2D" parent="."]
+position = Vector2(300, 360)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("8_ladder")
+
+[node name="Body" type="ColorRect" parent="Ladder"]
+offset_left = -36.0
+offset_top = -36.0
+offset_right = 36.0
+offset_bottom = 36.0
+mouse_filter = 2
+color = Color(0.38, 0.26, 0.14, 1)
+
+[node name="Title" type="Label" parent="Ladder"]
+offset_left = -36.0
+offset_top = -12.0
+offset_right = 36.0
+offset_bottom = 12.0
+text = "LADDER"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="Ladder"]
+visible = false
+offset_left = -52.0
+offset_top = 40.0
+offset_right = 52.0
+offset_bottom = 64.0
+text = "E: Use ladder"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder"]
+shape = SubResource("RectangleShape2D_ladder")
+
+[node name="CaveExit" type="Area2D" parent="."]
+position = Vector2(150, 360)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("9_exit")
+target_scene = "res://scenes/forest.tscn"
+
+[node name="Body" type="ColorRect" parent="CaveExit"]
+offset_left = -48.0
+offset_top = -36.0
+offset_right = 48.0
+offset_bottom = 36.0
+mouse_filter = 2
+color = Color(0.22, 0.2, 0.18, 1)
+
+[node name="Title" type="Label" parent="CaveExit"]
+offset_left = -48.0
+offset_top = -12.0
+offset_right = 48.0
+offset_bottom = 12.0
+text = "FOREST"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="CaveExit"]
+visible = false
+offset_left = -52.0
+offset_top = 40.0
+offset_right = 52.0
+offset_bottom = 64.0
+text = "E: Leave cave"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaveExit"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(300, 360)
+
+[node name="HUD" parent="." instance=ExtResource("2_hud")]
+
+[node name="InventoryPanel" parent="." instance=ExtResource("3_inv")]
+
+[node name="BotanaryPanel" parent="." instance=ExtResource("11_botanary")]
+
+[node name="LadderMenu" parent="." instance=ExtResource("4_ladder_menu")]

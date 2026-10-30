@@ -1,0 +1,33 @@
+{
+  "forest": {
+    "Morning": [
+      { "item": "dew_herb", "weight": 1, "max": 5 }
+    ],
+    "Afternoon": [
+      { "item": "sun_plant", "weight": 1, "max": 5 }
+    ],
+    "Evening": [
+      { "item": "moon_mushroom", "weight": 1, "max": 5 }
+    ],
+    "Midnight": []
+  },
+  "cave_depths": {
+    "1": [
+      { "item": "moon_mushroom", "weight": 1, "max": 3 }
+    ],
+    "2": [
+      { "item": "moon_mushroom", "weight": 1, "max": 3 }
+    ],
+    "3": [
+      { "item": "moon_mushroom", "weight": 1, "max": 3 }
+    ],
+    "4": [
+      { "item": "moon_mushroom", "weight": 1, "max": 3 }
+    ]
+  },
+  "midnight_bloom": {
+    "item": "midnight_bloom",
+    "max": 1,
+    "window_seconds": 60
+  }
+}

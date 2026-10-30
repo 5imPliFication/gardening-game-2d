@@ -1,0 +1,306 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="2_hud"]
+[ext_resource type="PackedScene" path="res://ui/inventory_panel.tscn" id="3_inv"]
+[ext_resource type="PackedScene" path="res://ui/crafting_panel.tscn" id="4_craft"]
+[ext_resource type="PackedScene" path="res://ui/sell_bin_panel.tscn" id="5_sell"]
+[ext_resource type="Script" path="res://scripts/home.gd" id="6_home"]
+[ext_resource type="Script" path="res://scripts/menu_station.gd" id="7_station"]
+[ext_resource type="Script" path="res://scripts/scene_exit.gd" id="8_exit"]
+[ext_resource type="PackedScene" path="res://ui/shop_panel.tscn" id="9_shop"]
+[ext_resource type="Script" path="res://scripts/night_cycle.gd" id="10_night"]
+[ext_resource type="PackedScene" path="res://ui/upgrade_panel.tscn" id="11_upgrade"]
+[ext_resource type="PackedScene" path="res://ui/botanary_panel.tscn" id="12_botanary"]
+[ext_resource type="PackedScene" path="res://ui/home_menu.tscn" id="13_home_menu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_station"]
+size = Vector2(112, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(120, 48)
+
+[node name="Home" type="Node2D"]
+script = ExtResource("6_home")
+
+[node name="NightCycle" type="Node" parent="."]
+script = ExtResource("10_night")
+
+[node name="Ground" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 960.0
+offset_bottom = 640.0
+color = Color(0.16, 0.1, 0.08, 1)
+
+[node name="HomeLabel" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 220.0
+offset_right = 610.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 20
+text = "HOME - Time is paused"
+horizontal_alignment = 1
+
+[node name="CraftingStation" type="Area2D" parent="."]
+position = Vector2(320, 300)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_station")
+station_type = "crafting"
+
+[node name="Body" type="ColorRect" parent="CraftingStation"]
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 56.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.42, 0.2, 0.5, 1)
+
+[node name="Title" type="Label" parent="CraftingStation"]
+offset_left = -56.0
+offset_top = -18.0
+offset_right = 56.0
+offset_bottom = 6.0
+text = "CAULDRON"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="CraftingStation"]
+visible = false
+offset_left = -56.0
+offset_top = 44.0
+offset_right = 56.0
+offset_bottom = 68.0
+text = "E: Craft"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CraftingStation"]
+shape = SubResource("RectangleShape2D_station")
+
+[node name="SellBin" type="Area2D" parent="."]
+position = Vector2(640, 300)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_station")
+station_type = "sell_bin"
+
+[node name="Body" type="ColorRect" parent="SellBin"]
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 56.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.2, 0.45, 0.3, 1)
+
+[node name="Title" type="Label" parent="SellBin"]
+offset_left = -56.0
+offset_top = -18.0
+offset_right = 56.0
+offset_bottom = 6.0
+text = "SELL BIN"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="SellBin"]
+visible = false
+offset_left = -56.0
+offset_top = 44.0
+offset_right = 56.0
+offset_bottom = 68.0
+text = "E: Sell"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SellBin"]
+shape = SubResource("RectangleShape2D_station")
+
+[node name="ShopCounter" type="Area2D" parent="."]
+position = Vector2(480, 300)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_station")
+station_type = "shop"
+
+[node name="Body" type="ColorRect" parent="ShopCounter"]
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 56.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.16, 0.3, 0.55, 1)
+
+[node name="Title" type="Label" parent="ShopCounter"]
+offset_left = -56.0
+offset_top = -18.0
+offset_right = 56.0
+offset_bottom = 6.0
+text = "SHOP COUNTER"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="ShopCounter"]
+visible = false
+offset_left = -56.0
+offset_top = 44.0
+offset_right = 56.0
+offset_bottom = 68.0
+text = "E: Open shop"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopCounter"]
+shape = SubResource("RectangleShape2D_station")
+
+[node name="Bed" type="Area2D" parent="."]
+position = Vector2(800, 300)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_station")
+station_type = "bed"
+
+[node name="Body" type="ColorRect" parent="Bed"]
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 56.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.45, 0.3, 0.42, 1)
+
+[node name="Title" type="Label" parent="Bed"]
+offset_left = -56.0
+offset_top = -18.0
+offset_right = 56.0
+offset_bottom = 6.0
+text = "BED"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="Bed"]
+visible = false
+offset_left = -56.0
+offset_top = 44.0
+offset_right = 56.0
+offset_bottom = 68.0
+text = "E: Sleep"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+shape = SubResource("RectangleShape2D_station")
+
+[node name="UpgradeStation" type="Area2D" parent="."]
+position = Vector2(760, 440)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_station")
+station_type = "upgrade"
+
+[node name="Body" type="ColorRect" parent="UpgradeStation"]
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 56.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.55, 0.4, 0.12, 1)
+
+[node name="Title" type="Label" parent="UpgradeStation"]
+offset_left = -56.0
+offset_top = -18.0
+offset_right = 56.0
+offset_bottom = 6.0
+text = "UPGRADES"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="UpgradeStation"]
+visible = false
+offset_left = -56.0
+offset_top = 44.0
+offset_right = 56.0
+offset_bottom = 68.0
+text = "E: Upgrade"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpgradeStation"]
+shape = SubResource("RectangleShape2D_station")
+
+[node name="HomeMenuStation" type="Area2D" parent="."]
+position = Vector2(200, 440)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_station")
+station_type = "home_menu"
+
+[node name="Body" type="ColorRect" parent="HomeMenuStation"]
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 56.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.25, 0.25, 0.32, 1)
+
+[node name="Title" type="Label" parent="HomeMenuStation"]
+offset_left = -56.0
+offset_top = -18.0
+offset_right = 56.0
+offset_bottom = 6.0
+text = "HOME MENU"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="HomeMenuStation"]
+visible = false
+offset_left = -56.0
+offset_top = 44.0
+offset_right = 56.0
+offset_bottom = 68.0
+text = "E: Open menu"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeMenuStation"]
+shape = SubResource("RectangleShape2D_station")
+
+[node name="ForestExit" type="Area2D" parent="."]
+position = Vector2(480, 500)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("8_exit")
+target_scene = "res://scenes/forest.tscn"
+
+[node name="Body" type="ColorRect" parent="ForestExit"]
+offset_left = -60.0
+offset_top = -24.0
+offset_right = 60.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.25, 0.38, 0.2, 1)
+
+[node name="Title" type="Label" parent="ForestExit"]
+offset_left = -60.0
+offset_top = -12.0
+offset_right = 60.0
+offset_bottom = 12.0
+text = "FOREST EXIT"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="ForestExit"]
+visible = false
+offset_left = -60.0
+offset_top = 28.0
+offset_right = 60.0
+offset_bottom = 52.0
+text = "E: Enter forest"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForestExit"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(480, 400)
+
+[node name="HUD" parent="." instance=ExtResource("2_hud")]
+
+[node name="InventoryPanel" parent="." instance=ExtResource("3_inv")]
+
+[node name="CraftingPanel" parent="." instance=ExtResource("4_craft")]
+
+[node name="SellBinPanel" parent="." instance=ExtResource("5_sell")]
+
+[node name="ShopPanel" parent="." instance=ExtResource("9_shop")]
+
+[node name="UpgradePanel" parent="." instance=ExtResource("11_upgrade")]
+
+[node name="BotanaryPanel" parent="." instance=ExtResource("12_botanary")]
+
+[node name="HomeMenu" parent="." instance=ExtResource("13_home_menu")]

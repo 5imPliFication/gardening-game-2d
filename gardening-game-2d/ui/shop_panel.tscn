@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/shop_panel.gd" id="1_shop"]
+
+[node name="ShopPanel" type="CanvasLayer"]
+visible = false
+layer = 3
+script = ExtResource("1_shop")
+
+[node name="Dimmer" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.55)
+
+[node name="Window" type="ColorRect" parent="."]
+offset_left = 70.0
+offset_top = 24.0
+offset_right = 570.0
+offset_bottom = 336.0
+mouse_filter = 0
+color = Color(0.08, 0.13, 0.2, 0.98)
+
+[node name="Title" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 360.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 18
+text = "Open Shop"
+
+[node name="CloseButton" type="Button" parent="Window"]
+offset_left = 442.0
+offset_top = 8.0
+offset_right = 488.0
+offset_bottom = 34.0
+text = "X"
+
+[node name="ClockNotice" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 40.0
+offset_right = 488.0
+offset_bottom = 62.0
+text = "The clock runs while the shop is open"
+
+[node name="NextBurstLabel" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 66.0
+offset_right = 488.0
+offset_bottom = 88.0
+text = "Next burst"
+
+[node name="CustomerList" type="VBoxContainer" parent="Window"]
+offset_left = 12.0
+offset_top = 98.0
+offset_right = 488.0
+offset_bottom = 206.0
+theme_override_constants/separation = 6
+
+[node name="LeaveNotice" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 216.0
+offset_right = 488.0
+offset_bottom = 238.0
+text = "Unserved customers leave when the next burst arrives"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 246.0
+offset_right = 488.0
+offset_bottom = 272.0
+horizontal_alignment = 1
+
+[node name="CloseHint" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 280.0
+offset_right = 488.0
+offset_bottom = 302.0
+text = "Esc to close"
+horizontal_alignment = 1

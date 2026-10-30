@@ -1,0 +1,26 @@
+{
+  "bag": {
+    "tiers": [
+      { "cost": 0, "effect": 10 },
+      { "cost": 100, "effect": 15 },
+      { "cost": 400, "effect": 22 },
+      { "cost": 1100, "effect": 30 }
+    ]
+  },
+  "lantern": {
+    "tiers": [
+      { "cost": 120, "effect": 1 },
+      { "cost": 400, "effect": 2 },
+      { "cost": 1100, "effect": 3 },
+      { "cost": 2600, "effect": 4 }
+    ]
+  },
+  "cauldron": {
+    "available_tiers": 2,
+    "tiers": [
+      { "cost": 0, "effect": 1 },
+      { "cost": 300, "effect": 2 },
+      { "cost": 900, "effect": 3 }
+    ]
+  }
+}

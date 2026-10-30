@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="2_hud"]
+[ext_resource type="PackedScene" path="res://ui/inventory_panel.tscn" id="3_inv"]
+[ext_resource type="PackedScene" path="res://ui/recovery_panel.tscn" id="4_recovery"]
+[ext_resource type="Script" path="res://scripts/clinic.gd" id="5_clinic"]
+[ext_resource type="Script" path="res://scripts/scene_exit.gd" id="6_exit"]
+[ext_resource type="PackedScene" path="res://ui/botanary_panel.tscn" id="7_botanary"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(120, 48)
+
+[node name="Clinic" type="Node2D"]
+script = ExtResource("5_clinic")
+
+[node name="Ground" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 960.0
+offset_bottom = 640.0
+color = Color(0.12, 0.18, 0.2, 1)
+
+[node name="ClinicLabel" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 230.0
+offset_right = 610.0
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 20
+text = "CLINIC"
+horizontal_alignment = 1
+
+[node name="HomeExit" type="Area2D" parent="."]
+position = Vector2(480, 500)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("6_exit")
+target_scene = "res://scenes/home.tscn"
+
+[node name="Body" type="ColorRect" parent="HomeExit"]
+offset_left = -60.0
+offset_top = -24.0
+offset_right = 60.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.25, 0.38, 0.42, 1)
+
+[node name="Title" type="Label" parent="HomeExit"]
+offset_left = -60.0
+offset_top = -12.0
+offset_right = 60.0
+offset_bottom = 12.0
+text = "GO HOME"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="HomeExit"]
+visible = false
+offset_left = -60.0
+offset_top = 28.0
+offset_right = 60.0
+offset_bottom = 52.0
+text = "E: Leave Clinic"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeExit"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(480, 400)
+
+[node name="HUD" parent="." instance=ExtResource("2_hud")]
+
+[node name="InventoryPanel" parent="." instance=ExtResource("3_inv")]
+
+[node name="BotanaryPanel" parent="." instance=ExtResource("7_botanary")]
+
+[node name="RecoveryPanel" parent="." instance=ExtResource("4_recovery")]

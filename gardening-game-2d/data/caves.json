@@ -1,0 +1,34 @@
+{
+  "cave_a": {
+    "depths": [
+      {
+        "depth": 1,
+        "required_tier": 1,
+        "spawn_table": "1",
+        "hole_candidates": ["hole_1_a", "hole_1_b", "hole_1_c"],
+        "art_theme": "cave"
+      },
+      {
+        "depth": 2,
+        "required_tier": 2,
+        "spawn_table": "2",
+        "hole_candidates": ["hole_2_a", "hole_2_b", "hole_2_c"],
+        "art_theme": "cave"
+      },
+      {
+        "depth": 3,
+        "required_tier": 3,
+        "spawn_table": "3",
+        "hole_candidates": ["hole_3_a", "hole_3_b", "hole_3_c"],
+        "art_theme": "cave"
+      },
+      {
+        "depth": 4,
+        "required_tier": 4,
+        "spawn_table": "4",
+        "hole_candidates": ["hole_4_a", "hole_4_b", "hole_4_c"],
+        "art_theme": "cave"
+      }
+    ]
+  }
+}

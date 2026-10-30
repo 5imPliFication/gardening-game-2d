@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/crafting_panel.gd" id="1_craft"]
+
+[node name="CraftingPanel" type="CanvasLayer"]
+visible = false
+layer = 3
+script = ExtResource("1_craft")
+
+[node name="Dimmer" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.55)
+
+[node name="Window" type="ColorRect" parent="."]
+offset_left = 90.0
+offset_top = 24.0
+offset_right = 550.0
+offset_bottom = 336.0
+mouse_filter = 0
+color = Color(0.14, 0.1, 0.18, 0.98)
+
+[node name="Title" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 330.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 18
+text = "Crafting"
+
+[node name="CloseButton" type="Button" parent="Window"]
+offset_left = 402.0
+offset_top = 8.0
+offset_right = 448.0
+offset_bottom = 34.0
+text = "X"
+
+[node name="CauldronLabel" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 38.0
+offset_right = 448.0
+offset_bottom = 60.0
+text = "Cauldron Tier 1"
+
+[node name="RecipeList" type="VBoxContainer" parent="Window"]
+offset_left = 12.0
+offset_top = 66.0
+offset_right = 448.0
+offset_bottom = 226.0
+theme_override_constants/separation = 8
+
+[node name="StatusLabel" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 244.0
+offset_right = 448.0
+offset_bottom = 270.0
+horizontal_alignment = 1
+
+[node name="CloseHint" type="Label" parent="Window"]
+offset_left = 12.0
+offset_top = 278.0
+offset_right = 448.0
+offset_bottom = 300.0
+text = "Esc to close"
+horizontal_alignment = 1

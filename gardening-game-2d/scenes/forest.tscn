@@ -1,0 +1,200 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_xk3p"]
+[ext_resource type="PackedScene" path="res://scenes/tree.tscn" id="2_yq7m"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="3_hud"]
+[ext_resource type="Script" path="res://scripts/forest_spawner.gd" id="4_spawner"]
+[ext_resource type="PackedScene" path="res://ui/inventory_panel.tscn" id="5_inv"]
+[ext_resource type="Script" path="res://scripts/forest.gd" id="6_forest"]
+[ext_resource type="Script" path="res://scripts/scene_exit.gd" id="7_exit"]
+[ext_resource type="Script" path="res://scripts/night_cycle.gd" id="8_night"]
+[ext_resource type="Script" path="res://scripts/cave_entrance.gd" id="9_cave"]
+[ext_resource type="PackedScene" path="res://ui/botanary_panel.tscn" id="10_botanary"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_home"]
+size = Vector2(80, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cave"]
+size = Vector2(96, 72)
+
+[node name="Forest" type="Node2D"]
+script = ExtResource("6_forest")
+
+[node name="NightCycle" type="Node" parent="."]
+script = ExtResource("8_night")
+
+[node name="Ground" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.05, 0.2, 0.05, 1)
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("4_spawner")
+
+[node name="SpawnMarkers" type="Node2D" parent="Spawner"]
+
+[node name="Marker01" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(80, 80)
+
+[node name="Marker02" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(180, 60)
+
+[node name="Marker03" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(460, 80)
+
+[node name="Marker04" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(580, 60)
+
+[node name="Marker05" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(760, 100)
+
+[node name="Marker06" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(900, 80)
+
+[node name="Marker07" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(1080, 120)
+
+[node name="Marker08" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(80, 200)
+
+[node name="Marker09" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(180, 320)
+
+[node name="Marker10" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(460, 320)
+
+[node name="Marker11" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(580, 200)
+
+[node name="Marker12" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(860, 300)
+
+[node name="Marker13" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(1040, 320)
+
+[node name="Marker14" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(100, 420)
+
+[node name="Marker15" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(260, 480)
+
+[node name="Marker16" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(400, 460)
+
+[node name="Marker17" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(560, 420)
+
+[node name="Marker18" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(760, 520)
+
+[node name="Marker19" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(980, 560)
+
+[node name="Marker20" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(1160, 480)
+
+[node name="Marker21" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(160, 620)
+
+[node name="Marker22" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(360, 640)
+
+[node name="Marker23" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(520, 620)
+
+[node name="Marker24" type="Marker2D" parent="Spawner/SpawnMarkers"]
+position = Vector2(1000, 660)
+
+[node name="Plants" type="Node2D" parent="Spawner"]
+
+[node name="Player" parent="." instance=ExtResource("1_xk3p")]
+position = Vector2(320, 180)
+
+[node name="Tree" parent="." instance=ExtResource("2_yq7m")]
+position = Vector2(400, 180)
+
+[node name="Tree2" parent="." instance=ExtResource("2_yq7m")]
+position = Vector2(240, 180)
+
+[node name="Tree3" parent="." instance=ExtResource("2_yq7m")]
+position = Vector2(320, 100)
+
+[node name="Tree4" parent="." instance=ExtResource("2_yq7m")]
+position = Vector2(320, 260)
+
+[node name="HomeEntrance" type="Area2D" parent="."]
+position = Vector2(520, 180)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("7_exit")
+target_scene = "res://scenes/home.tscn"
+
+[node name="Body" type="ColorRect" parent="HomeEntrance"]
+offset_left = -40.0
+offset_top = -32.0
+offset_right = 40.0
+offset_bottom = 32.0
+mouse_filter = 2
+color = Color(0.5, 0.28, 0.16, 1)
+
+[node name="Title" type="Label" parent="HomeEntrance"]
+offset_left = -40.0
+offset_top = -10.0
+offset_right = 40.0
+offset_bottom = 14.0
+text = "HOME"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="HomeEntrance"]
+visible = false
+offset_left = -52.0
+offset_top = 36.0
+offset_right = 52.0
+offset_bottom = 60.0
+text = "E: Enter home"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeEntrance"]
+shape = SubResource("RectangleShape2D_home")
+
+[node name="CaveEntrance" type="Area2D" parent="."]
+position = Vector2(760, 180)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("9_cave")
+cave_id = "cave_a"
+
+[node name="Body" type="ColorRect" parent="CaveEntrance"]
+offset_left = -48.0
+offset_top = -36.0
+offset_right = 48.0
+offset_bottom = 36.0
+mouse_filter = 2
+color = Color(0.09, 0.09, 0.12, 1)
+
+[node name="Title" type="Label" parent="CaveEntrance"]
+offset_left = -48.0
+offset_top = -12.0
+offset_right = 48.0
+offset_bottom = 12.0
+text = "CAVE A"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="CaveEntrance"]
+visible = false
+offset_left = -60.0
+offset_top = 40.0
+offset_right = 60.0
+offset_bottom = 64.0
+text = "E: Enter cave"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaveEntrance"]
+shape = SubResource("RectangleShape2D_cave")
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="InventoryPanel" parent="." instance=ExtResource("5_inv")]
+
+[node name="BotanaryPanel" parent="." instance=ExtResource("10_botanary")]

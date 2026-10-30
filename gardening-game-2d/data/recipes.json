@@ -1,0 +1,26 @@
+[
+  {
+    "id": "dew_potion",
+    "inputs": [
+      { "item": "dew_herb", "count": 2 }
+    ],
+    "output": { "item": "dew_potion", "count": 1 },
+    "cauldron_tier": 1
+  },
+  {
+    "id": "sun_potion",
+    "inputs": [
+      { "item": "sun_plant", "count": 2 }
+    ],
+    "output": { "item": "sun_potion", "count": 1 },
+    "cauldron_tier": 1
+  },
+  {
+    "id": "moon_potion",
+    "inputs": [
+      { "item": "moon_mushroom", "count": 2 }
+    ],
+    "output": { "item": "moon_potion", "count": 1 },
+    "cauldron_tier": 2
+  }
+]
