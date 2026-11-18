@@ -1,0 +1,1596 @@
+{
+  "version": 1,
+  "source_cell_size": [
+    48,
+    64
+  ],
+  "atlas_row_order": [
+    "down",
+    "left_down",
+    "left_up",
+    "up",
+    "right_up",
+    "right_down"
+  ],
+  "game_crop_box": [
+    8,
+    14,
+    40,
+    46
+  ],
+  "game_frame_size": [
+    32,
+    32
+  ],
+  "game_anchor_px": [
+    16,
+    29
+  ],
+  "source_images": [
+    {
+      "source": "The Female Adventurer - Free/Dash/Dash.png",
+      "gender": "female",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/female/lantern/Dash/Dash.png",
+      "lantern_layer": "native/female/lantern_layers/Dash/Dash.png",
+      "recolored": "native/female/recolored/Dash/Dash.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dash_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/female/lantern/Dash/Dash_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Dash/Dash_Down.png",
+      "recolored": "native/female/recolored/Dash/Dash_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dash_Left_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/female/lantern/Dash/Dash_Left_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Dash/Dash_Left_Down.png",
+      "recolored": "native/female/recolored/Dash/Dash_Left_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dash_Left_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/female/lantern/Dash/Dash_Left_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Dash/Dash_Left_Up.png",
+      "recolored": "native/female/recolored/Dash/Dash_Left_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dash_Right_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/female/lantern/Dash/Dash_Right_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Dash/Dash_Right_Down.png",
+      "recolored": "native/female/recolored/Dash/Dash_Right_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dash_Right_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/female/lantern/Dash/Dash_Right_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Dash/Dash_Right_Up.png",
+      "recolored": "native/female/recolored/Dash/Dash_Right_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dash_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/female/lantern/Dash/Dash_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Dash/Dash_Up.png",
+      "recolored": "native/female/recolored/Dash/Dash_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dust/Dash_Dust.png",
+      "gender": "female",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Dash/Dust/Dash_Dust.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dust/Dash_Dust_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Dash/Dust/Dash_Dust_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dust/Dash_Dust_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Dash/Dust/Dash_Dust_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dust/Dash_Dust_left_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Dash/Dust/Dash_Dust_left_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dust/Dash_Dust_left_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Dash/Dust/Dash_Dust_left_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dust/Dash_Dust_right_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Dash/Dust/Dash_Dust_right_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Dash/Dust/Dash_Dust_right_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Dash/Dust/Dash_Dust_right_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death/death.png",
+      "gender": "female",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/female/lantern/Death/death.png",
+      "lantern_layer": "native/female/lantern_layers/Death/death.png",
+      "recolored": "native/female/recolored/Death/death.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death/death_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/female/lantern/Death/death_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Death/death_Down.png",
+      "recolored": "native/female/recolored/Death/death_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death/death_Left_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/female/lantern/Death/death_Left_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Death/death_Left_Down.png",
+      "recolored": "native/female/recolored/Death/death_Left_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death/death_Left_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/female/lantern/Death/death_Left_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Death/death_Left_Up.png",
+      "recolored": "native/female/recolored/Death/death_Left_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death/death_Right_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/female/lantern/Death/death_Right_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Death/death_Right_Down.png",
+      "recolored": "native/female/recolored/Death/death_Right_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death/death_Right_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/female/lantern/Death/death_Right_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Death/death_Right_Up.png",
+      "recolored": "native/female/recolored/Death/death_Right_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death/death_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/female/lantern/Death/death_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Death/death_Up.png",
+      "recolored": "native/female/recolored/Death/death_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death_Shadow/death_normal.png",
+      "gender": "female",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Death_Shadow/death_normal.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death_Shadow/death_normal_down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Death_Shadow/death_normal_down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death_Shadow/death_normal_left_down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Death_Shadow/death_normal_left_down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death_Shadow/death_normal_left_up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Death_Shadow/death_normal_left_up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death_Shadow/death_normal_right_down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Death_Shadow/death_normal_right_down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death_Shadow/death_normal_right_up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Death_Shadow/death_normal_right_up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Death_Shadow/death_normal_up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Death_Shadow/death_normal_up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Idle/Idle.png",
+      "gender": "female",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/female/lantern/Idle/Idle.png",
+      "lantern_layer": "native/female/lantern_layers/Idle/Idle.png",
+      "recolored": "native/female/recolored/Idle/Idle.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Idle/Idle_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/female/lantern/Idle/Idle_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Idle/Idle_Down.png",
+      "recolored": "native/female/recolored/Idle/Idle_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Idle/Idle_Left_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/female/lantern/Idle/Idle_Left_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Idle/Idle_Left_Down.png",
+      "recolored": "native/female/recolored/Idle/Idle_Left_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Idle/Idle_Left_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/female/lantern/Idle/Idle_Left_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Idle/Idle_Left_Up.png",
+      "recolored": "native/female/recolored/Idle/Idle_Left_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Idle/Idle_Right_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/female/lantern/Idle/Idle_Right_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Idle/Idle_Right_Down.png",
+      "recolored": "native/female/recolored/Idle/Idle_Right_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Idle/Idle_Right_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/female/lantern/Idle/Idle_Right_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Idle/Idle_Right_Up.png",
+      "recolored": "native/female/recolored/Idle/Idle_Right_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Idle/Idle_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/female/lantern/Idle/Idle_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Idle/Idle_Up.png",
+      "recolored": "native/female/recolored/Idle/Idle_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Shadow.png",
+      "gender": "female",
+      "size": [
+        48,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/female/recolored/Shadow.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Walk/walk.png",
+      "gender": "female",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/female/lantern/Walk/walk.png",
+      "lantern_layer": "native/female/lantern_layers/Walk/walk.png",
+      "recolored": "native/female/recolored/Walk/walk.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Walk/walk_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/female/lantern/Walk/walk_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Walk/walk_Down.png",
+      "recolored": "native/female/recolored/Walk/walk_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Walk/walk_Left_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/female/lantern/Walk/walk_Left_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Walk/walk_Left_Down.png",
+      "recolored": "native/female/recolored/Walk/walk_Left_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Walk/walk_Left_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/female/lantern/Walk/walk_Left_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Walk/walk_Left_Up.png",
+      "recolored": "native/female/recolored/Walk/walk_Left_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Walk/walk_Right_Down.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/female/lantern/Walk/walk_Right_Down.png",
+      "lantern_layer": "native/female/lantern_layers/Walk/walk_Right_Down.png",
+      "recolored": "native/female/recolored/Walk/walk_Right_Down.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Walk/walk_Right_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/female/lantern/Walk/walk_Right_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Walk/walk_Right_Up.png",
+      "recolored": "native/female/recolored/Walk/walk_Right_Up.png"
+    },
+    {
+      "source": "The Female Adventurer - Free/Walk/walk_Up.png",
+      "gender": "female",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/female/lantern/Walk/walk_Up.png",
+      "lantern_layer": "native/female/lantern_layers/Walk/walk_Up.png",
+      "recolored": "native/female/recolored/Walk/walk_Up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dash.png",
+      "gender": "male",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/male/lantern/Dash/Dash.png",
+      "lantern_layer": "native/male/lantern_layers/Dash/Dash.png",
+      "recolored": "native/male/recolored/Dash/Dash.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dash_Down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/male/lantern/Dash/Dash_Down.png",
+      "lantern_layer": "native/male/lantern_layers/Dash/Dash_Down.png",
+      "recolored": "native/male/recolored/Dash/Dash_Down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dash_left_Down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/male/lantern/Dash/Dash_left_Down.png",
+      "lantern_layer": "native/male/lantern_layers/Dash/Dash_left_Down.png",
+      "recolored": "native/male/recolored/Dash/Dash_left_Down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dash_left_Up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/male/lantern/Dash/Dash_left_Up.png",
+      "lantern_layer": "native/male/lantern_layers/Dash/Dash_left_Up.png",
+      "recolored": "native/male/recolored/Dash/Dash_left_Up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dash_right_Down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/male/lantern/Dash/Dash_right_Down.png",
+      "lantern_layer": "native/male/lantern_layers/Dash/Dash_right_Down.png",
+      "recolored": "native/male/recolored/Dash/Dash_right_Down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dash_right_Up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/male/lantern/Dash/Dash_right_Up.png",
+      "lantern_layer": "native/male/lantern_layers/Dash/Dash_right_Up.png",
+      "recolored": "native/male/recolored/Dash/Dash_right_Up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dash_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "dash",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 80,
+      "lantern": "native/male/lantern/Dash/Dash_up.png",
+      "lantern_layer": "native/male/lantern_layers/Dash/Dash_up.png",
+      "recolored": "native/male/recolored/Dash/Dash_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dust/Dash_Dust.png",
+      "gender": "male",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash/Dust/Dash_Dust.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dust/Dash_Dust_Down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash/Dust/Dash_Dust_Down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dust/Dash_Dust_Up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash/Dust/Dash_Dust_Up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dust/Dash_Dust_left_Down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash/Dust/Dash_Dust_left_Down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dust/Dash_Dust_left_Up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash/Dust/Dash_Dust_left_Up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dust/Dash_Dust_right_Down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash/Dust/Dash_Dust_right_Down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash/Dust/Dash_Dust_right_Up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash/Dust/Dash_Dust_right_Up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Dash_Shadow.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Dash_Shadow.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death/death_normal.png",
+      "gender": "male",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/male/lantern/Death/death_normal.png",
+      "lantern_layer": "native/male/lantern_layers/Death/death_normal.png",
+      "recolored": "native/male/recolored/Death/death_normal.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death/death_normal_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/male/lantern/Death/death_normal_down.png",
+      "lantern_layer": "native/male/lantern_layers/Death/death_normal_down.png",
+      "recolored": "native/male/recolored/Death/death_normal_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death/death_normal_left_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/male/lantern/Death/death_normal_left_down.png",
+      "lantern_layer": "native/male/lantern_layers/Death/death_normal_left_down.png",
+      "recolored": "native/male/recolored/Death/death_normal_left_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death/death_normal_left_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/male/lantern/Death/death_normal_left_up.png",
+      "lantern_layer": "native/male/lantern_layers/Death/death_normal_left_up.png",
+      "recolored": "native/male/recolored/Death/death_normal_left_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death/death_normal_right_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/male/lantern/Death/death_normal_right_down.png",
+      "lantern_layer": "native/male/lantern_layers/Death/death_normal_right_down.png",
+      "recolored": "native/male/recolored/Death/death_normal_right_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death/death_normal_right_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/male/lantern/Death/death_normal_right_up.png",
+      "lantern_layer": "native/male/lantern_layers/Death/death_normal_right_up.png",
+      "recolored": "native/male/recolored/Death/death_normal_right_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death/death_normal_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "death",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 140,
+      "lantern": "native/male/lantern/Death/death_normal_up.png",
+      "lantern_layer": "native/male/lantern_layers/Death/death_normal_up.png",
+      "recolored": "native/male/recolored/Death/death_normal_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death Shadow/death_normal.png",
+      "gender": "male",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Death Shadow/death_normal.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death Shadow/death_normal_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Death Shadow/death_normal_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death Shadow/death_normal_left_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Death Shadow/death_normal_left_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death Shadow/death_normal_left_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Death Shadow/death_normal_left_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death Shadow/death_normal_right_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Death Shadow/death_normal_right_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death Shadow/death_normal_right_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Death Shadow/death_normal_right_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Death Shadow/death_normal_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Death Shadow/death_normal_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Idle/idle.png",
+      "gender": "male",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/male/lantern/Idle/idle.png",
+      "lantern_layer": "native/male/lantern_layers/Idle/idle.png",
+      "recolored": "native/male/recolored/Idle/idle.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Idle/idle_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/male/lantern/Idle/idle_down.png",
+      "lantern_layer": "native/male/lantern_layers/Idle/idle_down.png",
+      "recolored": "native/male/recolored/Idle/idle_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Idle/idle_left_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/male/lantern/Idle/idle_left_down.png",
+      "lantern_layer": "native/male/lantern_layers/Idle/idle_left_down.png",
+      "recolored": "native/male/recolored/Idle/idle_left_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Idle/idle_left_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/male/lantern/Idle/idle_left_up.png",
+      "lantern_layer": "native/male/lantern_layers/Idle/idle_left_up.png",
+      "recolored": "native/male/recolored/Idle/idle_left_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Idle/idle_right_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/male/lantern/Idle/idle_right_down.png",
+      "lantern_layer": "native/male/lantern_layers/Idle/idle_right_down.png",
+      "recolored": "native/male/recolored/Idle/idle_right_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Idle/idle_right_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/male/lantern/Idle/idle_right_up.png",
+      "lantern_layer": "native/male/lantern_layers/Idle/idle_right_up.png",
+      "recolored": "native/male/recolored/Idle/idle_right_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Idle/idle_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "idle",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 160,
+      "lantern": "native/male/lantern/Idle/idle_up.png",
+      "lantern_layer": "native/male/lantern_layers/Idle/idle_up.png",
+      "recolored": "native/male/recolored/Idle/idle_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Shadow.png",
+      "gender": "male",
+      "size": [
+        48,
+        64
+      ],
+      "kind": "support",
+      "recolored": "native/male/recolored/Shadow.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Walk/walk.png",
+      "gender": "male",
+      "size": [
+        384,
+        384
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "atlas",
+      "columns": 8,
+      "rows": 6,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/male/lantern/Walk/walk.png",
+      "lantern_layer": "native/male/lantern_layers/Walk/walk.png",
+      "recolored": "native/male/recolored/Walk/walk.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Walk/walk_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/male/lantern/Walk/walk_down.png",
+      "lantern_layer": "native/male/lantern_layers/Walk/walk_down.png",
+      "recolored": "native/male/recolored/Walk/walk_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Walk/walk_left_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "left_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/male/lantern/Walk/walk_left_down.png",
+      "lantern_layer": "native/male/lantern_layers/Walk/walk_left_down.png",
+      "recolored": "native/male/recolored/Walk/walk_left_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Walk/walk_left_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "left_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/male/lantern/Walk/walk_left_up.png",
+      "lantern_layer": "native/male/lantern_layers/Walk/walk_left_up.png",
+      "recolored": "native/male/recolored/Walk/walk_left_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Walk/walk_right_down.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "right_down",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/male/lantern/Walk/walk_right_down.png",
+      "lantern_layer": "native/male/lantern_layers/Walk/walk_right_down.png",
+      "recolored": "native/male/recolored/Walk/walk_right_down.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Walk/walk_right_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "right_up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/male/lantern/Walk/walk_right_up.png",
+      "lantern_layer": "native/male/lantern_layers/Walk/walk_right_up.png",
+      "recolored": "native/male/recolored/Walk/walk_right_up.png"
+    },
+    {
+      "source": "The Male adventurer - Free/Walk/walk_up.png",
+      "gender": "male",
+      "size": [
+        384,
+        64
+      ],
+      "kind": "character",
+      "state": "walk",
+      "direction": "up",
+      "columns": 8,
+      "rows": 1,
+      "source_frame_size": [
+        48,
+        64
+      ],
+      "preview_frame_ms": 100,
+      "lantern": "native/male/lantern/Walk/walk_up.png",
+      "lantern_layer": "native/male/lantern_layers/Walk/walk_up.png",
+      "recolored": "native/male/recolored/Walk/walk_up.png"
+    }
+  ],
+  "palette_hex": {
+    "#000000": "#211e2c",
+    "#120317": "#211929",
+    "#220728": "#2b2135",
+    "#230726": "#302337",
+    "#310d35": "#392a45",
+    "#3b122f": "#412b3c",
+    "#43153b": "#4b3348",
+    "#4e1a3f": "#57394d",
+    "#511c3a": "#5b3c4a",
+    "#571748": "#5d3c59",
+    "#6e2749": "#75475f",
+    "#7b3155": "#80546c",
+    "#913c51": "#956577",
+    "#95426a": "#9d687e",
+    "#8c3c62": "#94627a",
+    "#8c4b63": "#996d7e",
+    "#c16a7d": "#c58089",
+    "#e5959f": "#e8aaa5",
+    "#3c295e": "#4b3a64",
+    "#2c1d48": "#392d50",
+    "#1d1133": "#2b223d",
+    "#22153a": "#302640",
+    "#140a26": "#241c32",
+    "#160d25": "#281f35",
+    "#32214d": "#40324f",
+    "#32417f": "#355e6c",
+    "#3c548f": "#477c80",
+    "#283070": "#2d4b5c",
+    "#1a1b41": "#293745",
+    "#22306a": "#2d4859",
+    "#771313": "#78546f",
+    "#771212": "#76516c",
+    "#ac3232": "#a7789c",
+    "#480f0f": "#50384e",
+    "#2a6957": "#39786e",
+    "#3b804d": "#5b9b7b",
+    "#3e7d8d": "#57948e",
+    "#5078a1": "#769da8",
+    "#222028": "#2c2936",
+    "#343336": "#3e3a48",
+    "#404040": "#494551",
+    "#3d3d3d": "#46424e",
+    "#595959": "#615a6b",
+    "#676767": "#6d6577",
+    "#737373": "#7b7283",
+    "#8f8f8f": "#97909f",
+    "#aeaeae": "#b4adb9",
+    "#a27242": "#ad865e",
+    "#9c8c9c": "#a698ac",
+    "#f2e9f2": "#f4e9df"
+  },
+  "exports_32px": {
+    "root": "32x32",
+    "states": [
+      "idle",
+      "walk"
+    ],
+    "variants": [
+      "recolored",
+      "lantern",
+      "lantern_layers"
+    ],
+    "columns": 8,
+    "strip_size": [
+      256,
+      32
+    ],
+    "direction_names": [
+      "down",
+      "left_down",
+      "left_up",
+      "up",
+      "right_up",
+      "right_down"
+    ]
+  },
+  "timing_note": "Preview timings are suggestions; source PNGs contain no playback durations.",
+  "source_note": "Female Walk atlas and individual directional strips have source pixel differences; both are adapted independently, without replacing either."
+}

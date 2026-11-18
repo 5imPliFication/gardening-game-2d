@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://scripts/world_location.gd"
 
 @onready var player: CharacterBody2D = $Player
 @onready var arrival_marker: Marker2D = $ArrivalMarker
@@ -17,6 +17,12 @@ func _ready() -> void:
 	if depth_data.is_empty():
 		push_error("CaveDepth: missing cave depth data")
 		return
+	var theme: String = str(depth_data.get("art_theme", "cave_moss"))
+	var environments: Dictionary = GameData.visuals.get("environments", {})
+	var environment_path: String = str(environments.get(theme, ""))
+	if not environment_path.is_empty():
+		var environment: Node2D = (load(environment_path) as PackedScene).instantiate()
+		$Environment.add_child(environment)
 
 	depth_label.visible = true
 	depth_label.text = "Cave A - Depth %d | Lantern %d" % [
@@ -25,6 +31,8 @@ func _ready() -> void:
 	_configure_hole(depth_data)
 	_configure_ladder_and_exit()
 	_place_player()
+	map_id = "%s_%d" % [GameState.current_cave_id, GameState.current_cave_depth]
+	super._ready()
 
 
 func _configure_hole(depth_data: Dictionary) -> void:

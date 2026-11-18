@@ -1,0 +1,37 @@
+POTION FORAGER — ART CREDITS
+
+User-supplied character asset packs:
+- "The Female Adventurer - Free"
+  Original files: art/The Female Adventurer - Free/
+- "The Male adventurer - Free"
+  Original files: art/The Male adventurer - Free/
+
+Original artist/publisher and source URL were not included in the supplied
+folders and have not been identified here. These are third-party assets,
+not original project character artwork.
+
+Project adaptations:
+- art/adventurers-spooky-cute/: subtle palette changes, original pixel-art
+  waist lantern and belt strap, composited lantern variants, aligned 32x32
+  idle/walk exports, and review previews, made with OpenAI's coding assistant.
+- Source character poses, shading, animation drawings, and silhouettes are
+  from the user-supplied packs above. The original files are preserved.
+
+Earlier project-created review art:
+- art/spooky-cute-starter/
+- art/spooky-cute-expanded/
+- art/spooky-cute-keyframes/
+  Original pixel-grid drawings created with OpenAI's coding assistant.
+
+Connected terrain artwork:
+- art/woodland-tileset/ and
+  gardening-game-2d/assets/tilesets/woodland/
+  Original 32x32 grass, dirt, stone paving, gravel, sand, water, wood and
+  concrete textures, connected terrain shapes, variation tiles and mixed
+  surface sheets created with OpenAI's coding assistant. The 14 decoration
+  tiles reuse earlier original project-created trees, rocks and plants.
+  No third-party terrain pack or imported character artwork is included in
+  this TileSet or its example scene.
+
+Tools: Pillow for image processing. Review labels use the system DejaVu Sans
+font when available; no font file is bundled.

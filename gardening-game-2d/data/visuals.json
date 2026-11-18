@@ -1,0 +1,648 @@
+{
+  "default_appearance": "female",
+  "characters": {
+    "female": {
+      "recolored": "res://assets/characters/female/recolored.tres",
+      "lantern": "res://assets/characters/female/lantern.tres"
+    },
+    "male": {
+      "recolored": "res://assets/characters/male/recolored.tres",
+      "lantern": "res://assets/characters/male/lantern.tres"
+    }
+  },
+  "animations": {
+    "res://assets/characters/female/recolored.tres": [
+      {
+        "name": "idle_down",
+        "texture": "res://assets/characters/female/recolored/idle_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_down",
+        "texture": "res://assets/characters/female/recolored/idle_left_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_up",
+        "texture": "res://assets/characters/female/recolored/idle_left_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_up",
+        "texture": "res://assets/characters/female/recolored/idle_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_up",
+        "texture": "res://assets/characters/female/recolored/idle_right_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_down",
+        "texture": "res://assets/characters/female/recolored/idle_right_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_down",
+        "texture": "res://assets/characters/female/recolored/walk_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_down",
+        "texture": "res://assets/characters/female/recolored/walk_left_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_up",
+        "texture": "res://assets/characters/female/recolored/walk_left_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_up",
+        "texture": "res://assets/characters/female/recolored/walk_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_up",
+        "texture": "res://assets/characters/female/recolored/walk_right_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_down",
+        "texture": "res://assets/characters/female/recolored/walk_right_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/characters/female/lantern.tres": [
+      {
+        "name": "idle_down",
+        "texture": "res://assets/characters/female/lantern/idle_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_down",
+        "texture": "res://assets/characters/female/lantern/idle_left_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_up",
+        "texture": "res://assets/characters/female/lantern/idle_left_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_up",
+        "texture": "res://assets/characters/female/lantern/idle_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_up",
+        "texture": "res://assets/characters/female/lantern/idle_right_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_down",
+        "texture": "res://assets/characters/female/lantern/idle_right_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_down",
+        "texture": "res://assets/characters/female/lantern/walk_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_down",
+        "texture": "res://assets/characters/female/lantern/walk_left_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_up",
+        "texture": "res://assets/characters/female/lantern/walk_left_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_up",
+        "texture": "res://assets/characters/female/lantern/walk_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_up",
+        "texture": "res://assets/characters/female/lantern/walk_right_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_down",
+        "texture": "res://assets/characters/female/lantern/walk_right_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/characters/male/recolored.tres": [
+      {
+        "name": "idle_down",
+        "texture": "res://assets/characters/male/recolored/idle_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_down",
+        "texture": "res://assets/characters/male/recolored/idle_left_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_up",
+        "texture": "res://assets/characters/male/recolored/idle_left_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_up",
+        "texture": "res://assets/characters/male/recolored/idle_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_up",
+        "texture": "res://assets/characters/male/recolored/idle_right_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_down",
+        "texture": "res://assets/characters/male/recolored/idle_right_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_down",
+        "texture": "res://assets/characters/male/recolored/walk_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_down",
+        "texture": "res://assets/characters/male/recolored/walk_left_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_up",
+        "texture": "res://assets/characters/male/recolored/walk_left_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_up",
+        "texture": "res://assets/characters/male/recolored/walk_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_up",
+        "texture": "res://assets/characters/male/recolored/walk_right_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_down",
+        "texture": "res://assets/characters/male/recolored/walk_right_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/characters/male/lantern.tres": [
+      {
+        "name": "idle_down",
+        "texture": "res://assets/characters/male/lantern/idle_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_down",
+        "texture": "res://assets/characters/male/lantern/idle_left_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_left_up",
+        "texture": "res://assets/characters/male/lantern/idle_left_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_up",
+        "texture": "res://assets/characters/male/lantern/idle_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_up",
+        "texture": "res://assets/characters/male/lantern/idle_right_up.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "idle_right_down",
+        "texture": "res://assets/characters/male/lantern/idle_right_down.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_down",
+        "texture": "res://assets/characters/male/lantern/walk_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_down",
+        "texture": "res://assets/characters/male/lantern/walk_left_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_left_up",
+        "texture": "res://assets/characters/male/lantern/walk_left_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_up",
+        "texture": "res://assets/characters/male/lantern/walk_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_up",
+        "texture": "res://assets/characters/male/lantern/walk_right_up.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "walk_right_down",
+        "texture": "res://assets/characters/male/lantern/walk_right_down.png",
+        "frames": 8,
+        "fps": 10.0,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/plants/dew_herb.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/plants/dew_herb.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/plants/sun_plant.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/plants/sun_plant.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/plants/moon_mushroom.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/plants/moon_mushroom.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/plants/midnight_bloom.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/plants/midnight_bloom.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/trees/witchwood.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/trees/witchwood.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/trees/moon_pine.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/trees/moon_pine.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/trees/lavender_willow.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/trees/lavender_willow.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "res://assets/environment/trees/silver_birch.tres": [
+      {
+        "name": "idle",
+        "texture": "res://assets/environment/trees/silver_birch.png",
+        "frames": 8,
+        "fps": 6.25,
+        "size": [
+          32,
+          32
+        ]
+      }
+    ]
+  },
+  "world_bounds": {
+    "forest": [
+      1280,
+      736
+    ],
+    "home": [
+      960,
+      640
+    ],
+    "clinic": [
+      960,
+      640
+    ],
+    "cave": [
+      4512,
+      736
+    ],
+    "town_square": [
+      960,
+      640
+    ],
+    "bubble_street": [
+      1280,
+      736
+    ]
+  },
+  "environments": {
+    "forest": "res://assets/world/forest_environment.tscn",
+    "home": "res://assets/world/home_environment.tscn",
+    "clinic": "res://assets/world/clinic_environment.tscn",
+    "town_square": "res://assets/world/town_square_environment.tscn",
+    "bubble_street": "res://assets/world/bubble_street_environment.tscn",
+    "cave_moss": "res://assets/world/cave_moss_environment.tscn",
+    "cave_slate": "res://assets/world/cave_slate_environment.tscn",
+    "cave_amber": "res://assets/world/cave_amber_environment.tscn",
+    "cave_moon": "res://assets/world/cave_moon_environment.tscn"
+  },
+  "plants": {
+    "dew_herb": "res://assets/environment/plants/dew_herb.tres",
+    "sun_plant": "res://assets/environment/plants/sun_plant.tres",
+    "moon_mushroom": "res://assets/environment/plants/moon_mushroom.tres",
+    "midnight_bloom": "res://assets/environment/plants/midnight_bloom.tres"
+  },
+  "trees": {
+    "witchwood": "res://assets/environment/trees/witchwood.tres",
+    "moon_pine": "res://assets/environment/trees/moon_pine.tres",
+    "lavender_willow": "res://assets/environment/trees/lavender_willow.tres",
+    "silver_birch": "res://assets/environment/trees/silver_birch.tres"
+  }
+}

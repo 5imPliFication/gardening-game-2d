@@ -4,23 +4,67 @@ const SAVE_VERSION: int = 1
 const DEFAULT_SAVE_PATH: String = "user://save.json"
 
 var save_path: String = DEFAULT_SAVE_PATH
-
-
-func _ready() -> void:
-	if load_game():
-		call_deferred("_resume_saved_location")
+var _location_override: String = ""
 
 
 func save_game(resume_location: String = "") -> bool:
 	if resume_location != "":
 		GameState.resume_location = _validated_resume_location(resume_location)
-	return save_to_path(save_path)
+		_location_override = GameState.resume_location
+	var success: bool = save_to_path(save_path)
+	_location_override = ""
+	return success
 
 
 func load_game() -> bool:
-	if load_from_path(save_path):
+	return load_slot(save_path)
+
+
+func load_slot(path: String) -> bool:
+	if load_from_path(path):
 		return true
-	return load_from_path(save_path + ".bak")
+	return load_from_path(path + ".bak")
+
+
+func inspect_slot(path: String) -> Dictionary:
+	for candidate: String in [path, path + ".bak"]:
+		if not FileAccess.file_exists(candidate):
+			continue
+		var parser: JSON = JSON.new()
+		if parser.parse(FileAccess.get_file_as_string(candidate)) != OK:
+			continue
+		var parsed: Variant = parser.data
+		if not parsed is Dictionary:
+			continue
+		var data: Dictionary = parsed
+		if int(data.get("version", 0)) != SAVE_VERSION or not _validate_save_data(data):
+			continue
+		var location: Dictionary = data.get("location", {})
+		var id: String = str(location.get("id", data.get("resume_location", "forest")))
+		var definition: Dictionary = GameData.maps.get("locations", {}).get(id, {})
+		return {"valid": true, "day": int(data["day"]), "gold": int(data["gold"]), "location": str(definition.get("name", id)), "timestamp": float(data.get("saved_at", FileAccess.get_modified_time(candidate))), "backup": candidate != path}
+	return {"valid": false, "exists": FileAccess.file_exists(path) or FileAccess.file_exists(path + ".bak")}
+
+
+func latest_slot() -> String:
+	var latest: String = ""
+	var timestamp: float = -1.0
+	for value: Variant in GameData.interface_data.get("save_slots", []):
+		var slot: Dictionary = value
+		var path: String = str(slot["path"])
+		var info: Dictionary = inspect_slot(path)
+		if bool(info.get("valid", false)) and float(info["timestamp"]) > timestamp:
+			latest = path
+			timestamp = float(info["timestamp"])
+	return latest
+
+
+func resume_game() -> Error:
+	var locations: Dictionary = GameData.maps.get("locations", {})
+	var definition: Dictionary = locations.get(GameState.current_map_id, locations.get(GameState.resume_location, {}))
+	var path: String = str(definition.get("scene", "res://scenes/town_square.tscn"))
+	GameState.pending_spawn = ""
+	return get_tree().change_scene_to_file(path)
 
 
 func save_to_path(path: String) -> bool:
@@ -65,9 +109,11 @@ func load_from_path(path: String) -> bool:
 	if file == null:
 		push_error("SaveManager: unable to read %s" % path)
 		return false
-	var parsed: Variant = JSON.parse_string(file.get_as_text())
+	var parser: JSON = JSON.new()
+	var parse_error: Error = parser.parse(file.get_as_text())
+	var parsed: Variant = parser.data
 	file.close()
-	if not parsed is Dictionary:
+	if parse_error != OK or not parsed is Dictionary:
 		push_warning("SaveManager: invalid save JSON")
 		return false
 	var data: Dictionary = parsed
@@ -84,6 +130,9 @@ func load_from_path(path: String) -> bool:
 func _build_save_data() -> Dictionary:
 	return {
 		"version": SAVE_VERSION,
+		"appearance": GameState.appearance,
+		"location": _snapshot_location(),
+		"saved_at": Time.get_unix_time_from_system(),
 		"day": GameClock.day,
 		"phase_index": GameClock.phase_index,
 		"seconds_into_phase": GameClock.seconds_into_phase,
@@ -119,6 +168,7 @@ func _build_save_data() -> Dictionary:
 
 
 func _apply_save_data(data: Dictionary) -> void:
+	GameState.set_appearance(str(data.get("appearance", GameData.visuals.get("default_appearance", "female"))))
 	GameState.gold = maxi(0, int(data.get("gold", 0)))
 	GameState.inventory = _sanitize_inventory(data.get("inventory", {}))
 
@@ -137,6 +187,12 @@ func _apply_save_data(data: Dictionary) -> void:
 	GameState.cave_entry_mode = str(current_cave.get("entry_mode", "entrance"))
 	GameState.last_recovery = _as_dictionary(data.get("last_recovery", {})).duplicate(true)
 	GameState.resume_location = _validated_resume_location(str(data.get("resume_location", "forest")))
+	var location: Dictionary = data.get("location", {})
+	GameState.current_map_id = str(location.get("id", GameState.resume_location))
+	GameState.has_pending_position = location.has("position")
+	if GameState.has_pending_position:
+		var position_data: Array = location["position"]
+		GameState.pending_position = Vector2(float(position_data[0]), float(position_data[1]))
 
 	var world: Dictionary = _as_dictionary(data.get("world", {}))
 	GameState.forest_spawn_day = int(world.get("forest_spawn_day", 0))
@@ -214,6 +270,12 @@ func _clamp_tier(line: String, value: int, minimum: int) -> int:
 
 
 func _validate_save_data(data: Dictionary) -> bool:
+	if data.has("location") and not _validate_location(data):
+		return false
+	if data.has("appearance"):
+		var characters: Dictionary = GameData.visuals.get("characters", {})
+		if not data["appearance"] is String or not characters.has(data["appearance"]):
+			return false
 	var required_keys: Array[String] = [
 		"day", "phase_index", "seconds_into_phase", "gold", "inventory",
 		"upgrade_tiers", "botanary", "cave_progress", "flags", "current_cave",
@@ -262,6 +324,43 @@ func _validate_save_data(data: Dictionary) -> bool:
 		return false
 	var world: Dictionary = data["world"]
 	return _validate_world_data(world)
+
+
+func _snapshot_location() -> Dictionary:
+	var id: String = _location_override if not _location_override.is_empty() else GameState.current_map_id
+	var locations: Dictionary = GameData.maps.get("locations", {})
+	var definition: Dictionary = locations.get(id, {})
+	var position: Vector2 = GameState.map_player_position
+	if id != GameState.current_map_id:
+		var spawn: Array = definition.get("default_spawn", [480, 400])
+		position = Vector2(float(spawn[0]), float(spawn[1]))
+	return {"id": id, "position": [position.x, position.y]}
+
+
+func _validate_location(data: Dictionary) -> bool:
+	if not data["location"] is Dictionary:
+		return false
+	var location: Dictionary = data["location"]
+	var locations: Dictionary = GameData.maps.get("locations", {})
+	if not location.get("id") is String or not locations.has(location["id"]):
+		return false
+	var position: Variant = location.get("position")
+	if not position is Array or position.size() != 2:
+		return false
+	var definition: Dictionary = locations[location["id"]]
+	var bounds: Array = definition["size"]
+	for index: int in range(2):
+		if not _is_number(position[index]) or not is_finite(float(position[index])):
+			return false
+		if float(position[index]) < 0 or float(position[index]) > float(bounds[index]):
+			return false
+	if definition.has("cave_id"):
+		if not data.get("current_cave", {}) is Dictionary:
+			return false
+		var cave: Dictionary = data.get("current_cave", {})
+		if cave.get("id") != definition["cave_id"] or int(cave.get("depth", 0)) != int(definition["depth"]):
+			return false
+	return true
 
 
 func _validate_cave_progress(saved: Dictionary) -> bool:
@@ -355,20 +454,17 @@ func _is_number(value: Variant) -> bool:
 
 
 func _validated_resume_location(value: String) -> String:
-	if value == "home" or value == "clinic":
+	if value in ["home", "clinic", "town_square", "bubble_street"]:
 		return value
 	return "forest"
 
 
 func _is_valid_resume_location(value: String) -> bool:
-	return value == "forest" or value == "home" or value == "clinic"
+	return value in ["forest", "home", "clinic", "town_square", "bubble_street"]
 
 
 func _resume_saved_location() -> void:
-	if GameState.resume_location == "home":
-		get_tree().change_scene_to_file("res://scenes/home.tscn")
-	elif GameState.resume_location == "clinic":
-		get_tree().change_scene_to_file("res://scenes/clinic.tscn")
+	resume_game()
 
 
 func _as_dictionary(value: Variant) -> Dictionary:

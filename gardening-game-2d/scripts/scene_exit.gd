@@ -1,6 +1,7 @@
 extends Area2D
 
 @export_file("*.tscn") var target_scene: String
+@export var target_spawn: String = ""
 
 @onready var prompt: Label = $Prompt
 
@@ -23,7 +24,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 
 	get_viewport().set_input_as_handled()
-	get_tree().change_scene_to_file(target_scene)
+	GameState.pending_spawn = target_spawn
+	var error: Error = get_tree().change_scene_to_file(target_scene)
+	if error != OK:
+		GameState.pending_spawn = ""
+		EventBus.message_requested.emit("Could not enter this area.")
 
 
 func _on_body_entered(body: Node2D) -> void:

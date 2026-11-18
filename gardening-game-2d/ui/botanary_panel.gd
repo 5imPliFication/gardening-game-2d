@@ -75,7 +75,7 @@ func _make_entry(item_id: String, item: Dictionary, is_discovered: bool) -> HBox
 
 	if is_discovered:
 		var icon: TextureRect = TextureRect.new()
-		icon.custom_minimum_size = Vector2(48, 48)
+		icon.custom_minimum_size = Vector2(32, 32)
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		icon.texture = _load_icon(item)

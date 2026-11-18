@@ -15,6 +15,11 @@ signal sleep_requested
 signal ladder_requested
 signal upgrade_requested
 signal upgrades_changed
+signal appearance_changed
+signal location_changed(map_id: String)
+signal player_position_changed(position: Vector2)
+signal player_spawn_requested(position: Vector2)
+signal cave_progress_changed
 signal home_menu_requested
 signal botanary_changed
 signal message_requested(text: String)

@@ -6,6 +6,9 @@ var spawns: Dictionary = {}
 var upgrades: Dictionary = {}
 var caves: Dictionary = {}
 var customers: Dictionary = {}
+var visuals: Dictionary = {}
+var maps: Dictionary = {}
+var interface_data: Dictionary = {}
 
 
 func _ready() -> void:
@@ -15,6 +18,9 @@ func _ready() -> void:
 	upgrades = _load_dictionary("res://data/upgrades.json")
 	caves = _load_dictionary("res://data/caves.json")
 	customers = _load_dictionary("res://data/customers.json")
+	visuals = _load_dictionary("res://data/visuals.json")
+	maps = _load_dictionary("res://data/maps.json")
+	interface_data = _load_dictionary("res://data/interface.json")
 
 	print("GameData loaded: items=%d recipes=%d spawns=%d upgrades=%d caves=%d customers=%d" % [
 		items.size(), recipes.size(), spawns.size(), upgrades.size(), caves.size(), customers.size()

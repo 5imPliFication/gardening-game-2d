@@ -4,7 +4,7 @@
     "name": "Dew Herb",
     "type": "raw",
     "base_price": 6,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/dew_herb.png",
     "botanary": true,
     "hint": "Common in the morning.",
     "lore": ""
@@ -14,7 +14,7 @@
     "name": "Sun Plant",
     "type": "raw",
     "base_price": 8,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/sun_plant.png",
     "botanary": true,
     "hint": "Blooms in the afternoon.",
     "lore": ""
@@ -24,7 +24,7 @@
     "name": "Moon Mushroom",
     "type": "raw",
     "base_price": 10,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/moon_mushroom.png",
     "botanary": true,
     "hint": "Appears in the evening.",
     "lore": ""
@@ -34,7 +34,7 @@
     "name": "Midnight Bloom",
     "type": "raw",
     "base_price": 40,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/midnight_bloom.png",
     "botanary": true,
     "hint": "Blooms only in the last minute before midnight.",
     "lore": ""
@@ -44,7 +44,7 @@
     "name": "Bottle",
     "type": "base",
     "base_price": 3,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/bottle.png",
     "botanary": false,
     "hint": "",
     "lore": ""
@@ -54,7 +54,7 @@
     "name": "Water",
     "type": "base",
     "base_price": 1,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/water.png",
     "botanary": false,
     "hint": "",
     "lore": ""
@@ -64,7 +64,7 @@
     "name": "Sugar",
     "type": "base",
     "base_price": 2,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/sugar.png",
     "botanary": false,
     "hint": "",
     "lore": ""
@@ -74,7 +74,7 @@
     "name": "Dew Potion",
     "type": "potion",
     "base_price": 35,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/dew_potion.png",
     "botanary": false,
     "hint": "",
     "lore": ""
@@ -84,7 +84,7 @@
     "name": "Sun Potion",
     "type": "potion",
     "base_price": 45,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/sun_potion.png",
     "botanary": false,
     "hint": "",
     "lore": ""
@@ -94,7 +94,7 @@
     "name": "Moon Potion",
     "type": "potion",
     "base_price": 60,
-    "icon": "res://icon.svg",
+    "icon": "res://assets/items/moon_potion.png",
     "botanary": false,
     "hint": "",
     "lore": ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=26 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" path="res://ui/hud.tscn" id="2_hud"]
@@ -13,6 +13,14 @@
 [ext_resource type="PackedScene" path="res://ui/upgrade_panel.tscn" id="11_upgrade"]
 [ext_resource type="PackedScene" path="res://ui/botanary_panel.tscn" id="12_botanary"]
 [ext_resource type="PackedScene" path="res://ui/home_menu.tscn" id="13_home_menu"]
+[ext_resource type="PackedScene" path="res://assets/world/home_environment.tscn" id="14_environment"]
+[ext_resource type="Texture2D" path="res://assets/props/cauldron.png" id="15_cauldron"]
+[ext_resource type="Texture2D" path="res://assets/props/sell_bin.png" id="16_bin"]
+[ext_resource type="Texture2D" path="res://assets/props/counter.png" id="17_counter"]
+[ext_resource type="Texture2D" path="res://assets/props/bed.png" id="18_bed"]
+[ext_resource type="Texture2D" path="res://assets/props/upgrade.png" id="19_upgrade"]
+[ext_resource type="Texture2D" path="res://assets/props/menu.png" id="20_menu"]
+[ext_resource type="Texture2D" path="res://assets/props/door.png" id="21_door"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_station"]
 size = Vector2(112, 80)
@@ -20,24 +28,28 @@ size = Vector2(112, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
 size = Vector2(120, 48)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_furniture"]
+size = Vector2(56, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bed"]
+size = Vector2(40, 40)
+
 [node name="Home" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("6_home")
+map_id = "home"
 
 [node name="NightCycle" type="Node" parent="."]
 script = ExtResource("10_night")
 
-[node name="Ground" type="ColorRect" parent="."]
-z_index = -1
-offset_right = 960.0
-offset_bottom = 640.0
-color = Color(0.16, 0.1, 0.08, 1)
+[node name="Environment" parent="." instance=ExtResource("14_environment")]
 
 [node name="HomeLabel" type="Label" parent="."]
 offset_left = 350.0
-offset_top = 220.0
+offset_top = 80.0
 offset_right = 610.0
-offset_bottom = 252.0
-theme_override_font_sizes/font_size = 20
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 16
 text = "HOME - Time is paused"
 horizontal_alignment = 1
 
@@ -48,23 +60,23 @@ collision_mask = 1
 script = ExtResource("7_station")
 station_type = "crafting"
 
-[node name="Body" type="ColorRect" parent="CraftingStation"]
-offset_left = -56.0
-offset_top = -40.0
-offset_right = 56.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.42, 0.2, 0.5, 1)
+[node name="Body" type="Sprite2D" parent="CraftingStation"]
+position = Vector2(0, -26)
+scale = Vector2(2, 2)
+texture = ExtResource("15_cauldron")
 
 [node name="Title" type="Label" parent="CraftingStation"]
+z_index = 3
 offset_left = -56.0
-offset_top = -18.0
+offset_top = 8.0
 offset_right = 56.0
-offset_bottom = 6.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
 text = "CAULDRON"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="CraftingStation"]
+z_index = 3
 visible = false
 offset_left = -56.0
 offset_top = 44.0
@@ -83,23 +95,23 @@ collision_mask = 1
 script = ExtResource("7_station")
 station_type = "sell_bin"
 
-[node name="Body" type="ColorRect" parent="SellBin"]
-offset_left = -56.0
-offset_top = -40.0
-offset_right = 56.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.2, 0.45, 0.3, 1)
+[node name="Body" type="Sprite2D" parent="SellBin"]
+position = Vector2(0, -26)
+scale = Vector2(2, 2)
+texture = ExtResource("16_bin")
 
 [node name="Title" type="Label" parent="SellBin"]
+z_index = 3
 offset_left = -56.0
-offset_top = -18.0
+offset_top = 8.0
 offset_right = 56.0
-offset_bottom = 6.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
 text = "SELL BIN"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="SellBin"]
+z_index = 3
 visible = false
 offset_left = -56.0
 offset_top = 44.0
@@ -118,23 +130,23 @@ collision_mask = 1
 script = ExtResource("7_station")
 station_type = "shop"
 
-[node name="Body" type="ColorRect" parent="ShopCounter"]
-offset_left = -56.0
-offset_top = -40.0
-offset_right = 56.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.16, 0.3, 0.55, 1)
+[node name="Body" type="Sprite2D" parent="ShopCounter"]
+position = Vector2(0, -26)
+scale = Vector2(2, 2)
+texture = ExtResource("17_counter")
 
 [node name="Title" type="Label" parent="ShopCounter"]
+z_index = 3
 offset_left = -56.0
-offset_top = -18.0
+offset_top = 8.0
 offset_right = 56.0
-offset_bottom = 6.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
 text = "SHOP COUNTER"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="ShopCounter"]
+z_index = 3
 visible = false
 offset_left = -56.0
 offset_top = 44.0
@@ -153,23 +165,23 @@ collision_mask = 1
 script = ExtResource("7_station")
 station_type = "bed"
 
-[node name="Body" type="ColorRect" parent="Bed"]
-offset_left = -56.0
-offset_top = -40.0
-offset_right = 56.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.45, 0.3, 0.42, 1)
+[node name="Body" type="Sprite2D" parent="Bed"]
+position = Vector2(0, -26)
+scale = Vector2(2, 2)
+texture = ExtResource("18_bed")
 
 [node name="Title" type="Label" parent="Bed"]
+z_index = 3
 offset_left = -56.0
-offset_top = -18.0
+offset_top = 8.0
 offset_right = 56.0
-offset_bottom = 6.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
 text = "BED"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="Bed"]
+z_index = 3
 visible = false
 offset_left = -56.0
 offset_top = 44.0
@@ -188,23 +200,23 @@ collision_mask = 1
 script = ExtResource("7_station")
 station_type = "upgrade"
 
-[node name="Body" type="ColorRect" parent="UpgradeStation"]
-offset_left = -56.0
-offset_top = -40.0
-offset_right = 56.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.55, 0.4, 0.12, 1)
+[node name="Body" type="Sprite2D" parent="UpgradeStation"]
+position = Vector2(0, -26)
+scale = Vector2(2, 2)
+texture = ExtResource("19_upgrade")
 
 [node name="Title" type="Label" parent="UpgradeStation"]
+z_index = 3
 offset_left = -56.0
-offset_top = -18.0
+offset_top = 8.0
 offset_right = 56.0
-offset_bottom = 6.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
 text = "UPGRADES"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="UpgradeStation"]
+z_index = 3
 visible = false
 offset_left = -56.0
 offset_top = 44.0
@@ -223,23 +235,23 @@ collision_mask = 1
 script = ExtResource("7_station")
 station_type = "home_menu"
 
-[node name="Body" type="ColorRect" parent="HomeMenuStation"]
-offset_left = -56.0
-offset_top = -40.0
-offset_right = 56.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.25, 0.25, 0.32, 1)
+[node name="Body" type="Sprite2D" parent="HomeMenuStation"]
+position = Vector2(0, -26)
+scale = Vector2(2, 2)
+texture = ExtResource("20_menu")
 
 [node name="Title" type="Label" parent="HomeMenuStation"]
+z_index = 3
 offset_left = -56.0
-offset_top = -18.0
+offset_top = 8.0
 offset_right = 56.0
-offset_bottom = 6.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
 text = "HOME MENU"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="HomeMenuStation"]
+z_index = 3
 visible = false
 offset_left = -56.0
 offset_top = 44.0
@@ -256,31 +268,32 @@ position = Vector2(480, 500)
 collision_layer = 0
 collision_mask = 1
 script = ExtResource("8_exit")
-target_scene = "res://scenes/forest.tscn"
+target_scene = "res://scenes/bubble_street.tscn"
+target_spawn = "shop_door"
 
-[node name="Body" type="ColorRect" parent="ForestExit"]
-offset_left = -60.0
-offset_top = -24.0
-offset_right = 60.0
-offset_bottom = 24.0
-mouse_filter = 2
-color = Color(0.25, 0.38, 0.2, 1)
+[node name="Body" type="Sprite2D" parent="ForestExit"]
+position = Vector2(0, -26)
+scale = Vector2(2, 2)
+texture = ExtResource("21_door")
 
 [node name="Title" type="Label" parent="ForestExit"]
+z_index = 3
 offset_left = -60.0
-offset_top = -12.0
+offset_top = 8.0
 offset_right = 60.0
-offset_bottom = 12.0
-text = "FOREST EXIT"
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
+text = "BUBBLE STREET"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="ForestExit"]
+z_index = 3
 visible = false
 offset_left = -60.0
 offset_top = 28.0
 offset_right = 60.0
 offset_bottom = 52.0
-text = "E: Enter forest"
+text = "E: Go outside"
 horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ForestExit"]
@@ -288,6 +301,43 @@ shape = SubResource("RectangleShape2D_exit")
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
 position = Vector2(480, 400)
+world_art = "home"
+
+[node name="Solid" type="StaticBody2D" parent="CraftingStation"]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CraftingStation/Solid"]
+shape = SubResource("RectangleShape2D_furniture")
+
+[node name="Solid" type="StaticBody2D" parent="SellBin"]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SellBin/Solid"]
+shape = SubResource("RectangleShape2D_furniture")
+
+[node name="Solid" type="StaticBody2D" parent="ShopCounter"]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopCounter/Solid"]
+shape = SubResource("RectangleShape2D_furniture")
+
+[node name="Solid" type="StaticBody2D" parent="UpgradeStation"]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpgradeStation/Solid"]
+shape = SubResource("RectangleShape2D_furniture")
+
+[node name="Solid" type="StaticBody2D" parent="HomeMenuStation"]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeMenuStation/Solid"]
+shape = SubResource("RectangleShape2D_furniture")
+
+[node name="Solid" type="StaticBody2D" parent="Bed"]
+position = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Solid"]
+shape = SubResource("RectangleShape2D_bed")
 
 [node name="HUD" parent="." instance=ExtResource("2_hud")]
 

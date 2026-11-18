@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var body_rect: ColorRect = $Body
+@onready var body_sprite: Sprite2D = $Body
 @onready var found_label: Label = $FoundLabel
 @onready var prompt: Label = $Prompt
 
@@ -18,7 +18,7 @@ func _ready() -> void:
 
 func set_found(is_found: bool) -> void:
 	found_label.visible = is_found
-	body_rect.color = Color(0.12, 0.1, 0.08, 1) if is_found else Color(0.15, 0.15, 0.16, 1)
+	body_sprite.visible = is_found
 
 
 func _unhandled_input(event: InputEvent) -> void:

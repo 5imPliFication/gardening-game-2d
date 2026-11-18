@@ -79,7 +79,7 @@ func _make_row(item_id: String, item: Dictionary) -> HBoxContainer:
 	var row: HBoxContainer = HBoxContainer.new()
 
 	var icon: TextureRect = TextureRect.new()
-	icon.custom_minimum_size = Vector2(16, 16)
+	icon.custom_minimum_size = Vector2(32, 32)
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	icon.texture = _load_icon(item)

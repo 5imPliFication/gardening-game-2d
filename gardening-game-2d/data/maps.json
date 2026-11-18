@@ -1,0 +1,536 @@
+{
+  "locations": {
+    "forest": {
+      "name": "Forest",
+      "size": [
+        1280,
+        736
+      ],
+      "overview": "res://assets/maps/forest.png",
+      "environment": "res://assets/world/forest_environment.tscn",
+      "markers": [
+        {
+          "position": [
+            520,
+            180
+          ],
+          "kind": "exit"
+        },
+        {
+          "position": [
+            760,
+            180
+          ],
+          "kind": "cave"
+        }
+      ],
+      "spawns": {
+        "street_gate": [
+          520,
+          240
+        ],
+        "cave_gate": [
+          760,
+          240
+        ]
+      },
+      "structures": [],
+      "exits": [],
+      "scene": "res://scenes/forest.tscn",
+      "world_position": [
+        0.6,
+        0.25
+      ],
+      "description": "Forage among trees and follow the trail to the caves.",
+      "resume_allowed": true,
+      "default_spawn": [
+        320,
+        180
+      ]
+    },
+    "home": {
+      "name": "Player Shop",
+      "size": [
+        960,
+        640
+      ],
+      "overview": "res://assets/maps/home.png",
+      "environment": "res://assets/world/home_environment.tscn",
+      "markers": [],
+      "spawns": {},
+      "structures": [],
+      "exits": [],
+      "world_parent": "bubble_street",
+      "scene": "res://scenes/home.tscn",
+      "description": "Temporary shop interior: craft, sell, sleep, save and change appearance.",
+      "resume_allowed": true,
+      "default_spawn": [
+        480,
+        400
+      ]
+    },
+    "clinic": {
+      "name": "Clinic",
+      "size": [
+        960,
+        640
+      ],
+      "overview": "res://assets/maps/clinic.png",
+      "environment": "res://assets/world/clinic_environment.tscn",
+      "markers": [],
+      "spawns": {},
+      "structures": [],
+      "exits": [],
+      "world_parent": "town_square",
+      "scene": "res://scenes/clinic.tscn",
+      "description": "Temporary recovery interior on Town Square.",
+      "resume_allowed": true,
+      "default_spawn": [
+        480,
+        400
+      ]
+    },
+    "town_square": {
+      "name": "Town Square",
+      "size": [
+        960,
+        640
+      ],
+      "overview": "res://assets/maps/town_square.png",
+      "environment": "res://assets/world/town_square_environment.tscn",
+      "markers": [
+        {
+          "position": [
+            256,
+            224
+          ],
+          "kind": "pending",
+          "name": "Clinic",
+          "size": [
+            112,
+            80
+          ]
+        },
+        {
+          "position": [
+            704,
+            224
+          ],
+          "kind": "pending",
+          "name": "Town Hall",
+          "size": [
+            112,
+            80
+          ]
+        },
+        {
+          "position": [
+            480,
+            320
+          ],
+          "kind": "pending",
+          "name": "Fountain",
+          "size": [
+            112,
+            80
+          ]
+        },
+        {
+          "position": [
+            896,
+            432
+          ],
+          "kind": "exit"
+        }
+      ],
+      "spawns": {
+        "street_gate": [
+          832,
+          432
+        ],
+        "clinic_door": [
+          256,
+          284
+        ]
+      },
+      "structures": [
+        {
+          "name": "Clinic",
+          "position": [
+            256,
+            224
+          ],
+          "target_scene": "res://scenes/clinic.tscn"
+        },
+        {
+          "name": "Town Hall",
+          "position": [
+            704,
+            224
+          ]
+        },
+        {
+          "name": "Fountain",
+          "position": [
+            480,
+            320
+          ]
+        }
+      ],
+      "exits": [
+        {
+          "name": "Bubble Street",
+          "position": [
+            896,
+            432
+          ],
+          "target_scene": "res://scenes/bubble_street.tscn",
+          "target_spawn": "town_gate"
+        }
+      ],
+      "scene": "res://scenes/town_square.tscn",
+      "world_position": [
+        0.1,
+        0.25
+      ],
+      "description": "The town's starting plaza. Clinic and civic buildings are pending structures.",
+      "resume_allowed": true,
+      "default_spawn": [
+        480,
+        432
+      ]
+    },
+    "bubble_street": {
+      "name": "Bubble Street",
+      "size": [
+        1280,
+        736
+      ],
+      "overview": "res://assets/maps/bubble_street.png",
+      "environment": "res://assets/world/bubble_street_environment.tscn",
+      "markers": [
+        {
+          "position": [
+            520,
+            256
+          ],
+          "kind": "pending",
+          "name": "Player Shop",
+          "size": [
+            112,
+            80
+          ]
+        },
+        {
+          "position": [
+            800,
+            256
+          ],
+          "kind": "pending",
+          "name": "Apothecary",
+          "size": [
+            112,
+            80
+          ]
+        },
+        {
+          "position": [
+            256,
+            256
+          ],
+          "kind": "pending",
+          "name": "Cottage",
+          "size": [
+            112,
+            80
+          ]
+        },
+        {
+          "position": [
+            64,
+            432
+          ],
+          "kind": "exit"
+        },
+        {
+          "position": [
+            1184,
+            432
+          ],
+          "kind": "exit"
+        }
+      ],
+      "spawns": {
+        "town_gate": [
+          128,
+          432
+        ],
+        "forest_gate": [
+          1120,
+          432
+        ],
+        "shop_door": [
+          520,
+          316
+        ]
+      },
+      "structures": [
+        {
+          "name": "Player Shop",
+          "position": [
+            520,
+            256
+          ],
+          "target_scene": "res://scenes/home.tscn"
+        },
+        {
+          "name": "Apothecary",
+          "position": [
+            800,
+            256
+          ]
+        },
+        {
+          "name": "Cottage",
+          "position": [
+            256,
+            256
+          ]
+        }
+      ],
+      "exits": [
+        {
+          "name": "Town Square",
+          "position": [
+            64,
+            432
+          ],
+          "target_scene": "res://scenes/town_square.tscn",
+          "target_spawn": "street_gate"
+        },
+        {
+          "name": "Forest",
+          "position": [
+            1184,
+            432
+          ],
+          "target_scene": "res://scenes/forest.tscn",
+          "target_spawn": "street_gate"
+        }
+      ],
+      "scene": "res://scenes/bubble_street.tscn",
+      "world_position": [
+        0.35,
+        0.25
+      ],
+      "description": "The player's shop is here. Marked plots stand in for future buildings.",
+      "resume_allowed": true,
+      "default_spawn": [
+        480,
+        432
+      ]
+    },
+    "cave_a_1": {
+      "name": "Moss Hollow",
+      "size": [
+        4512,
+        736
+      ],
+      "overview": "res://assets/maps/cave_moss.png",
+      "environment": "res://assets/world/cave_moss_environment.tscn",
+      "markers": [
+        {
+          "position": [
+            300,
+            360
+          ],
+          "kind": "exit"
+        }
+      ],
+      "spawns": {},
+      "structures": [],
+      "exits": [],
+      "scene": "res://scenes/cave_depth.tscn",
+      "required_lantern": 1,
+      "world_position": [
+        0.86,
+        0.12
+      ],
+      "cave_id": "cave_a",
+      "depth": 1,
+      "description": "Cave A, depth 1. Moss Hollow: a distinct moss environment. Requires lantern level 1.",
+      "hole_positions": {
+        "hole_1_a": [
+          3900,
+          220
+        ],
+        "hole_1_b": [
+          4000,
+          360
+        ],
+        "hole_1_c": [
+          4100,
+          500
+        ]
+      }
+    },
+    "cave_a_2": {
+      "name": "Slate Gallery",
+      "size": [
+        4512,
+        736
+      ],
+      "overview": "res://assets/maps/cave_slate.png",
+      "environment": "res://assets/world/cave_slate_environment.tscn",
+      "markers": [
+        {
+          "position": [
+            300,
+            360
+          ],
+          "kind": "ladder"
+        }
+      ],
+      "spawns": {},
+      "structures": [],
+      "exits": [],
+      "scene": "res://scenes/cave_depth.tscn",
+      "required_lantern": 2,
+      "world_position": [
+        0.86,
+        0.35
+      ],
+      "cave_id": "cave_a",
+      "depth": 2,
+      "description": "Cave A, depth 2. Slate Gallery: a distinct slate environment. Requires lantern level 2.",
+      "hole_positions": {
+        "hole_2_a": [
+          3920,
+          500
+        ],
+        "hole_2_b": [
+          4020,
+          240
+        ],
+        "hole_2_c": [
+          4120,
+          380
+        ]
+      }
+    },
+    "cave_a_3": {
+      "name": "Amber Grotto",
+      "size": [
+        4512,
+        736
+      ],
+      "overview": "res://assets/maps/cave_amber.png",
+      "environment": "res://assets/world/cave_amber_environment.tscn",
+      "markers": [
+        {
+          "position": [
+            300,
+            360
+          ],
+          "kind": "ladder"
+        }
+      ],
+      "spawns": {},
+      "structures": [],
+      "exits": [],
+      "scene": "res://scenes/cave_depth.tscn",
+      "required_lantern": 3,
+      "world_position": [
+        0.86,
+        0.5800000000000001
+      ],
+      "cave_id": "cave_a",
+      "depth": 3,
+      "description": "Cave A, depth 3. Amber Grotto: a distinct amber environment. Requires lantern level 3.",
+      "hole_positions": {
+        "hole_3_a": [
+          3940,
+          260
+        ],
+        "hole_3_b": [
+          4040,
+          480
+        ],
+        "hole_3_c": [
+          4140,
+          340
+        ]
+      }
+    },
+    "cave_a_4": {
+      "name": "Moon Chamber",
+      "size": [
+        4512,
+        736
+      ],
+      "overview": "res://assets/maps/cave_moon.png",
+      "environment": "res://assets/world/cave_moon_environment.tscn",
+      "markers": [
+        {
+          "position": [
+            300,
+            360
+          ],
+          "kind": "ladder"
+        }
+      ],
+      "spawns": {},
+      "structures": [],
+      "exits": [],
+      "scene": "res://scenes/cave_depth.tscn",
+      "required_lantern": 4,
+      "world_position": [
+        0.86,
+        0.81
+      ],
+      "cave_id": "cave_a",
+      "depth": 4,
+      "description": "Cave A, depth 4. Moon Chamber: a distinct moon environment. Requires lantern level 4.",
+      "hole_positions": {
+        "hole_4_a": [
+          3960,
+          440
+        ],
+        "hole_4_b": [
+          4060,
+          220
+        ],
+        "hole_4_c": [
+          4160,
+          500
+        ]
+      }
+    }
+  },
+  "connections": [
+    [
+      "town_square",
+      "bubble_street"
+    ],
+    [
+      "bubble_street",
+      "forest"
+    ],
+    [
+      "forest",
+      "cave_a_1"
+    ],
+    [
+      "cave_a_1",
+      "cave_a_2"
+    ],
+    [
+      "cave_a_2",
+      "cave_a_3"
+    ],
+    [
+      "cave_a_3",
+      "cave_a_4"
+    ]
+  ]
+}

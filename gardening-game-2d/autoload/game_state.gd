@@ -21,19 +21,51 @@ var cave_plants: Dictionary = {}
 var discovered_plants: Dictionary = {}
 var resume_location: String = "forest"
 var last_save_failed: bool = false
+var appearance: String = "female"
+var current_map_id: String = "town_square"
+var map_player_position: Vector2 = Vector2.ZERO
+var pending_spawn: String = ""
+var pending_position: Vector2 = Vector2.ZERO
+var has_pending_position: bool = false
+var _initial_state: Dictionary = {}
 
 var _loss_rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var _cave_rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 
 func _ready() -> void:
+	for key: String in ["inventory", "bag_tier", "cauldron_tier", "gold", "forest_spawn_day", "forest_spawn_phase", "forest_plants", "can_stay_up_past_midnight", "last_recovery", "midnight_bloom_day", "midnight_bloom_collected", "lantern_tier", "current_cave_id", "current_cave_depth", "cave_entry_mode", "cave_progress", "cave_spawn_day", "cave_plants", "discovered_plants", "resume_location", "last_save_failed", "appearance", "current_map_id", "map_player_position", "pending_spawn", "pending_position", "has_pending_position"]:
+		var value: Variant = get(key)
+		_initial_state[key] = value.duplicate(true) if value is Dictionary or value is Array else value
 	_loss_rng.randomize()
 	_cave_rng.randomize()
 	EventBus.day_started.connect(_on_day_started)
 
 
+func reset_for_new_game(model: String) -> void:
+	for key: Variant in _initial_state:
+		var value: Variant = _initial_state[key]
+		set(str(key), value.duplicate(true) if value is Dictionary or value is Array else value)
+	set_appearance(model)
+	GameClock.restore_state(Config.START_DAY, 0, 0.0)
+	EventBus.inventory_changed.emit()
+	EventBus.gold_changed.emit(gold)
+	EventBus.upgrades_changed.emit()
+	EventBus.botanary_changed.emit()
+
+
 func get_item_count(id: String) -> int:
 	return int(inventory.get(id, 0))
+
+
+func set_appearance(value: String) -> bool:
+	var characters: Dictionary = GameData.visuals.get("characters", {})
+	if not characters.has(value):
+		return false
+	if appearance != value:
+		appearance = value
+		EventBus.appearance_changed.emit()
+	return true
 
 
 func get_total_item_count() -> int:
@@ -373,6 +405,7 @@ func mark_cave_hole_found(cave_id: String, depth: int) -> void:
 		found.append(depth)
 	progress["found_holes"] = found
 	cave_progress[cave_id] = progress
+	EventBus.cave_progress_changed.emit()
 
 
 func is_cave_hole_found(cave_id: String, depth: int) -> bool:
@@ -388,6 +421,7 @@ func mark_cave_ladder(cave_id: String, depth: int) -> void:
 		ladders.append(depth)
 	progress["ladders"] = ladders
 	cave_progress[cave_id] = progress
+	EventBus.cave_progress_changed.emit()
 
 
 func has_cave_ladder(cave_id: String, depth: int) -> bool:

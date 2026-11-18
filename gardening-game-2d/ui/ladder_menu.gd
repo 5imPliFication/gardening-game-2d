@@ -47,4 +47,5 @@ func _go_up() -> void:
 
 func _get_out() -> void:
 	_close()
+	GameState.pending_spawn = "cave_gate"
 	get_tree().change_scene_to_file("res://scenes/forest.tscn")

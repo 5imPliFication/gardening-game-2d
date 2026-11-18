@@ -5,10 +5,12 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-	visible = true
+	visible = str(GameState.last_recovery.get("reason", "")) == "pass_out" \
+		and not bool(GameState.last_recovery.get("acknowledged", false))
 	continue_button.pressed.connect(_close)
-	_refresh_message()
-	EventBus.menu_opened.emit()
+	if visible:
+		_refresh_message()
+		EventBus.menu_opened.emit()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -49,4 +51,5 @@ func _close() -> void:
 	if not visible:
 		return
 	visible = false
+	GameState.last_recovery["acknowledged"] = true
 	EventBus.menu_closed.emit()

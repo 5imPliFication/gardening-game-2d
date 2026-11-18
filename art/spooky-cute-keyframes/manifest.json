@@ -1,0 +1,1222 @@
+{
+  "version": 4,
+  "technique": "explicit redrawn key poses; no pixel displacement or interpolation",
+  "frame_size": [
+    32,
+    32
+  ],
+  "direction_row_order": [
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "animations": {
+    "player/male/walk/down": {
+      "frames": [
+        "sprites/player/male/walk/down/00.png",
+        "sprites/player/male/walk/down/01.png",
+        "sprites/player/male/walk/down/02.png",
+        "sprites/player/male/walk/down/03.png",
+        "sprites/player/male/walk/down/04.png",
+        "sprites/player/male/walk/down/05.png",
+        "sprites/player/male/walk/down/06.png",
+        "sprites/player/male/walk/down/07.png"
+      ],
+      "sheet": "sheets/player/male/walk/down.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/male/walk/left": {
+      "frames": [
+        "sprites/player/male/walk/left/00.png",
+        "sprites/player/male/walk/left/01.png",
+        "sprites/player/male/walk/left/02.png",
+        "sprites/player/male/walk/left/03.png",
+        "sprites/player/male/walk/left/04.png",
+        "sprites/player/male/walk/left/05.png",
+        "sprites/player/male/walk/left/06.png",
+        "sprites/player/male/walk/left/07.png"
+      ],
+      "sheet": "sheets/player/male/walk/left.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/male/walk/right": {
+      "frames": [
+        "sprites/player/male/walk/right/00.png",
+        "sprites/player/male/walk/right/01.png",
+        "sprites/player/male/walk/right/02.png",
+        "sprites/player/male/walk/right/03.png",
+        "sprites/player/male/walk/right/04.png",
+        "sprites/player/male/walk/right/05.png",
+        "sprites/player/male/walk/right/06.png",
+        "sprites/player/male/walk/right/07.png"
+      ],
+      "sheet": "sheets/player/male/walk/right.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/male/walk/up": {
+      "frames": [
+        "sprites/player/male/walk/up/00.png",
+        "sprites/player/male/walk/up/01.png",
+        "sprites/player/male/walk/up/02.png",
+        "sprites/player/male/walk/up/03.png",
+        "sprites/player/male/walk/up/04.png",
+        "sprites/player/male/walk/up/05.png",
+        "sprites/player/male/walk/up/06.png",
+        "sprites/player/male/walk/up/07.png"
+      ],
+      "sheet": "sheets/player/male/walk/up.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/male/idle/down": {
+      "frames": [
+        "sprites/player/male/idle/down/00.png",
+        "sprites/player/male/idle/down/01.png",
+        "sprites/player/male/idle/down/02.png",
+        "sprites/player/male/idle/down/03.png"
+      ],
+      "sheet": "sheets/player/male/idle/down.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/male/idle/left": {
+      "frames": [
+        "sprites/player/male/idle/left/00.png",
+        "sprites/player/male/idle/left/01.png",
+        "sprites/player/male/idle/left/02.png",
+        "sprites/player/male/idle/left/03.png"
+      ],
+      "sheet": "sheets/player/male/idle/left.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/male/idle/right": {
+      "frames": [
+        "sprites/player/male/idle/right/00.png",
+        "sprites/player/male/idle/right/01.png",
+        "sprites/player/male/idle/right/02.png",
+        "sprites/player/male/idle/right/03.png"
+      ],
+      "sheet": "sheets/player/male/idle/right.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/male/idle/up": {
+      "frames": [
+        "sprites/player/male/idle/up/00.png",
+        "sprites/player/male/idle/up/01.png",
+        "sprites/player/male/idle/up/02.png",
+        "sprites/player/male/idle/up/03.png"
+      ],
+      "sheet": "sheets/player/male/idle/up.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/male/rest/down": {
+      "frames": [
+        "sprites/player/male/rest/down/00.png",
+        "sprites/player/male/rest/down/01.png",
+        "sprites/player/male/rest/down/02.png",
+        "sprites/player/male/rest/down/03.png"
+      ],
+      "sheet": "sheets/player/male/rest/down.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/male/rest/left": {
+      "frames": [
+        "sprites/player/male/rest/left/00.png",
+        "sprites/player/male/rest/left/01.png",
+        "sprites/player/male/rest/left/02.png",
+        "sprites/player/male/rest/left/03.png"
+      ],
+      "sheet": "sheets/player/male/rest/left.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/male/rest/right": {
+      "frames": [
+        "sprites/player/male/rest/right/00.png",
+        "sprites/player/male/rest/right/01.png",
+        "sprites/player/male/rest/right/02.png",
+        "sprites/player/male/rest/right/03.png"
+      ],
+      "sheet": "sheets/player/male/rest/right.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/male/rest/up": {
+      "frames": [
+        "sprites/player/male/rest/up/00.png",
+        "sprites/player/male/rest/up/01.png",
+        "sprites/player/male/rest/up/02.png",
+        "sprites/player/male/rest/up/03.png"
+      ],
+      "sheet": "sheets/player/male/rest/up.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/walk/down": {
+      "frames": [
+        "sprites/player/female/walk/down/00.png",
+        "sprites/player/female/walk/down/01.png",
+        "sprites/player/female/walk/down/02.png",
+        "sprites/player/female/walk/down/03.png",
+        "sprites/player/female/walk/down/04.png",
+        "sprites/player/female/walk/down/05.png",
+        "sprites/player/female/walk/down/06.png",
+        "sprites/player/female/walk/down/07.png"
+      ],
+      "sheet": "sheets/player/female/walk/down.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/female/walk/left": {
+      "frames": [
+        "sprites/player/female/walk/left/00.png",
+        "sprites/player/female/walk/left/01.png",
+        "sprites/player/female/walk/left/02.png",
+        "sprites/player/female/walk/left/03.png",
+        "sprites/player/female/walk/left/04.png",
+        "sprites/player/female/walk/left/05.png",
+        "sprites/player/female/walk/left/06.png",
+        "sprites/player/female/walk/left/07.png"
+      ],
+      "sheet": "sheets/player/female/walk/left.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/female/walk/right": {
+      "frames": [
+        "sprites/player/female/walk/right/00.png",
+        "sprites/player/female/walk/right/01.png",
+        "sprites/player/female/walk/right/02.png",
+        "sprites/player/female/walk/right/03.png",
+        "sprites/player/female/walk/right/04.png",
+        "sprites/player/female/walk/right/05.png",
+        "sprites/player/female/walk/right/06.png",
+        "sprites/player/female/walk/right/07.png"
+      ],
+      "sheet": "sheets/player/female/walk/right.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/female/walk/up": {
+      "frames": [
+        "sprites/player/female/walk/up/00.png",
+        "sprites/player/female/walk/up/01.png",
+        "sprites/player/female/walk/up/02.png",
+        "sprites/player/female/walk/up/03.png",
+        "sprites/player/female/walk/up/04.png",
+        "sprites/player/female/walk/up/05.png",
+        "sprites/player/female/walk/up/06.png",
+        "sprites/player/female/walk/up/07.png"
+      ],
+      "sheet": "sheets/player/female/walk/up.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pose_names": [
+        "left_contact",
+        "left_down",
+        "left_passing",
+        "left_up",
+        "right_contact",
+        "right_down",
+        "right_passing",
+        "right_up"
+      ]
+    },
+    "player/female/idle/down": {
+      "frames": [
+        "sprites/player/female/idle/down/00.png",
+        "sprites/player/female/idle/down/01.png",
+        "sprites/player/female/idle/down/02.png",
+        "sprites/player/female/idle/down/03.png"
+      ],
+      "sheet": "sheets/player/female/idle/down.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/idle/left": {
+      "frames": [
+        "sprites/player/female/idle/left/00.png",
+        "sprites/player/female/idle/left/01.png",
+        "sprites/player/female/idle/left/02.png",
+        "sprites/player/female/idle/left/03.png"
+      ],
+      "sheet": "sheets/player/female/idle/left.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/idle/right": {
+      "frames": [
+        "sprites/player/female/idle/right/00.png",
+        "sprites/player/female/idle/right/01.png",
+        "sprites/player/female/idle/right/02.png",
+        "sprites/player/female/idle/right/03.png"
+      ],
+      "sheet": "sheets/player/female/idle/right.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/idle/up": {
+      "frames": [
+        "sprites/player/female/idle/up/00.png",
+        "sprites/player/female/idle/up/01.png",
+        "sprites/player/female/idle/up/02.png",
+        "sprites/player/female/idle/up/03.png"
+      ],
+      "sheet": "sheets/player/female/idle/up.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/rest/down": {
+      "frames": [
+        "sprites/player/female/rest/down/00.png",
+        "sprites/player/female/rest/down/01.png",
+        "sprites/player/female/rest/down/02.png",
+        "sprites/player/female/rest/down/03.png"
+      ],
+      "sheet": "sheets/player/female/rest/down.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/rest/left": {
+      "frames": [
+        "sprites/player/female/rest/left/00.png",
+        "sprites/player/female/rest/left/01.png",
+        "sprites/player/female/rest/left/02.png",
+        "sprites/player/female/rest/left/03.png"
+      ],
+      "sheet": "sheets/player/female/rest/left.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/rest/right": {
+      "frames": [
+        "sprites/player/female/rest/right/00.png",
+        "sprites/player/female/rest/right/01.png",
+        "sprites/player/female/rest/right/02.png",
+        "sprites/player/female/rest/right/03.png"
+      ],
+      "sheet": "sheets/player/female/rest/right.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "player/female/rest/up": {
+      "frames": [
+        "sprites/player/female/rest/up/00.png",
+        "sprites/player/female/rest/up/01.png",
+        "sprites/player/female/rest/up/02.png",
+        "sprites/player/female/rest/up/03.png"
+      ],
+      "sheet": "sheets/player/female/rest/up.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        500,
+        500,
+        500,
+        500
+      ],
+      "pose_names": [
+        "relaxed",
+        "inhale",
+        "settle",
+        "exhale"
+      ]
+    },
+    "environment/trees/witchwood": {
+      "frames": [
+        "sprites/environment/trees/witchwood/00.png",
+        "sprites/environment/trees/witchwood/01.png",
+        "sprites/environment/trees/witchwood/02.png",
+        "sprites/environment/trees/witchwood/03.png",
+        "sprites/environment/trees/witchwood/04.png",
+        "sprites/environment/trees/witchwood/05.png",
+        "sprites/environment/trees/witchwood/06.png",
+        "sprites/environment/trees/witchwood/07.png"
+      ],
+      "sheet": "sheets/environment/trees/witchwood.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "bend_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "bend_left",
+        "left_ease_out"
+      ]
+    },
+    "environment/trees/moon_pine": {
+      "frames": [
+        "sprites/environment/trees/moon_pine/00.png",
+        "sprites/environment/trees/moon_pine/01.png",
+        "sprites/environment/trees/moon_pine/02.png",
+        "sprites/environment/trees/moon_pine/03.png",
+        "sprites/environment/trees/moon_pine/04.png",
+        "sprites/environment/trees/moon_pine/05.png",
+        "sprites/environment/trees/moon_pine/06.png",
+        "sprites/environment/trees/moon_pine/07.png"
+      ],
+      "sheet": "sheets/environment/trees/moon_pine.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "bend_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "bend_left",
+        "left_ease_out"
+      ]
+    },
+    "environment/trees/lavender_willow": {
+      "frames": [
+        "sprites/environment/trees/lavender_willow/00.png",
+        "sprites/environment/trees/lavender_willow/01.png",
+        "sprites/environment/trees/lavender_willow/02.png",
+        "sprites/environment/trees/lavender_willow/03.png",
+        "sprites/environment/trees/lavender_willow/04.png",
+        "sprites/environment/trees/lavender_willow/05.png",
+        "sprites/environment/trees/lavender_willow/06.png",
+        "sprites/environment/trees/lavender_willow/07.png"
+      ],
+      "sheet": "sheets/environment/trees/lavender_willow.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "bend_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "bend_left",
+        "left_ease_out"
+      ]
+    },
+    "environment/trees/silver_birch": {
+      "frames": [
+        "sprites/environment/trees/silver_birch/00.png",
+        "sprites/environment/trees/silver_birch/01.png",
+        "sprites/environment/trees/silver_birch/02.png",
+        "sprites/environment/trees/silver_birch/03.png",
+        "sprites/environment/trees/silver_birch/04.png",
+        "sprites/environment/trees/silver_birch/05.png",
+        "sprites/environment/trees/silver_birch/06.png",
+        "sprites/environment/trees/silver_birch/07.png"
+      ],
+      "sheet": "sheets/environment/trees/silver_birch.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "bend_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "bend_left",
+        "left_ease_out"
+      ]
+    },
+    "plants/dew_herb": {
+      "frames": [
+        "sprites/plants/dew_herb/00.png",
+        "sprites/plants/dew_herb/01.png",
+        "sprites/plants/dew_herb/02.png",
+        "sprites/plants/dew_herb/03.png",
+        "sprites/plants/dew_herb/04.png",
+        "sprites/plants/dew_herb/05.png",
+        "sprites/plants/dew_herb/06.png",
+        "sprites/plants/dew_herb/07.png"
+      ],
+      "sheet": "sheets/plants/dew_herb.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "turn_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "turn_left",
+        "left_ease_out"
+      ]
+    },
+    "plants/sun_plant": {
+      "frames": [
+        "sprites/plants/sun_plant/00.png",
+        "sprites/plants/sun_plant/01.png",
+        "sprites/plants/sun_plant/02.png",
+        "sprites/plants/sun_plant/03.png",
+        "sprites/plants/sun_plant/04.png",
+        "sprites/plants/sun_plant/05.png",
+        "sprites/plants/sun_plant/06.png",
+        "sprites/plants/sun_plant/07.png"
+      ],
+      "sheet": "sheets/plants/sun_plant.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "turn_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "turn_left",
+        "left_ease_out"
+      ]
+    },
+    "plants/moon_mushroom": {
+      "frames": [
+        "sprites/plants/moon_mushroom/00.png",
+        "sprites/plants/moon_mushroom/01.png",
+        "sprites/plants/moon_mushroom/02.png",
+        "sprites/plants/moon_mushroom/03.png",
+        "sprites/plants/moon_mushroom/04.png",
+        "sprites/plants/moon_mushroom/05.png",
+        "sprites/plants/moon_mushroom/06.png",
+        "sprites/plants/moon_mushroom/07.png"
+      ],
+      "sheet": "sheets/plants/moon_mushroom.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "turn_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "turn_left",
+        "left_ease_out"
+      ]
+    },
+    "plants/midnight_bloom": {
+      "frames": [
+        "sprites/plants/midnight_bloom/00.png",
+        "sprites/plants/midnight_bloom/01.png",
+        "sprites/plants/midnight_bloom/02.png",
+        "sprites/plants/midnight_bloom/03.png",
+        "sprites/plants/midnight_bloom/04.png",
+        "sprites/plants/midnight_bloom/05.png",
+        "sprites/plants/midnight_bloom/06.png",
+        "sprites/plants/midnight_bloom/07.png"
+      ],
+      "sheet": "sheets/plants/midnight_bloom.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "open",
+        "right_ease_in",
+        "turn_right",
+        "right_ease_out",
+        "settle",
+        "left_ease_in",
+        "turn_left",
+        "left_ease_out"
+      ]
+    },
+    "environment/rocks/rune_glow": {
+      "frames": [
+        "sprites/environment/rocks/rune_glow/00.png",
+        "sprites/environment/rocks/rune_glow/01.png",
+        "sprites/environment/rocks/rune_glow/02.png",
+        "sprites/environment/rocks/rune_glow/03.png",
+        "sprites/environment/rocks/rune_glow/04.png",
+        "sprites/environment/rocks/rune_glow/05.png",
+        "sprites/environment/rocks/rune_glow/06.png",
+        "sprites/environment/rocks/rune_glow/07.png"
+      ],
+      "sheet": "sheets/environment/rocks/rune_glow.png",
+      "frame_size": [
+        32,
+        32
+      ],
+      "anchor_px": [
+        16,
+        29
+      ],
+      "loop": true,
+      "durations_ms": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "pose_names": [
+        "dim",
+        "rise_1",
+        "rise_2",
+        "peak",
+        "fall_1",
+        "fall_2",
+        "fall_3",
+        "low"
+      ]
+    }
+  },
+  "static_sprites": {
+    "plants/dew_herb": "sprites/plants/dew_herb.png",
+    "plants/sun_plant": "sprites/plants/sun_plant.png",
+    "plants/moon_mushroom": "sprites/plants/moon_mushroom.png",
+    "plants/midnight_bloom": "sprites/plants/midnight_bloom.png",
+    "environment/rocks/boulder": "sprites/environment/rocks/boulder.png",
+    "environment/rocks/mossy_boulder": "sprites/environment/rocks/mossy_boulder.png",
+    "environment/rocks/rune_rock": "sprites/environment/rocks/rune_rock.png",
+    "environment/rocks/flat_stone": "sprites/environment/rocks/flat_stone.png",
+    "environment/rocks/pebble_cluster": "sprites/environment/rocks/pebble_cluster.png",
+    "environment/rocks/small_stone": "sprites/environment/rocks/small_stone.png"
+  }
+}
