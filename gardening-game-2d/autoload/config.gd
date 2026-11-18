@@ -1,6 +1,6 @@
 extends Node
 
-const PLAYER_SPEED: float = 150.0
+const PLAYER_SPEED: float = 110.0
 const TILE_SIZE: int = 32
 
 const PHASE_SECONDS: float = 240.0

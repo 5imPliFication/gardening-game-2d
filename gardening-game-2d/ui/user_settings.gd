@@ -11,7 +11,7 @@ static func load_and_apply() -> void:
 	values = defaults.duplicate(true)
 	var file: ConfigFile = ConfigFile.new()
 	if file.load(PATH) == OK:
-		var legacy_fullscreen: Variant = file.get_value("settings", "fullscreen", null)
+		var legacy_fullscreen: Variant = file.get_value("settings", "fullscreen", null) if file.has_section_key("settings", "fullscreen") else null
 		for key: Variant in defaults:
 			var value: Variant = file.get_value("settings", str(key), defaults[key])
 			if key == "master_volume" and (value is float or value is int):

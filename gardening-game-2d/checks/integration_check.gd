@@ -1,5 +1,5 @@
 extends Node
-## Run in the documented /tmp/opencode XDG sandbox; never writes real player saves.
+## Run in the documented /media/simpi/program-files/opencode-temp sandbox; never writes real player saves.
 
 var checks: int = 0
 var root: Window:
@@ -22,7 +22,7 @@ func quit(code: int = 0) -> void:
 
 
 func _run() -> void:
-	if not _expect(OS.get_user_data_dir().begins_with("/tmp/opencode/"), "Use an isolated XDG_DATA_HOME under /tmp/opencode"):
+	if not _expect(OS.get_user_data_dir().begins_with("/media/simpi/program-files/opencode-temp/"), "Use an isolated XDG_DATA_HOME under /media/simpi/program-files/opencode-temp"):
 		return
 	for value: Variant in GameData.interface_data["save_slots"]:
 		var slot: Dictionary = value
